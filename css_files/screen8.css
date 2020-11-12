@@ -1,0 +1,192 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+.main {
+	content: '';
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	
+}
+
+.container-left{
+	width: 12%;
+	height: 100%;
+	float: left;
+	background-color: #3AAFA9;
+	position: relative;
+}
+.container-right {
+	width: 88%;
+	height: 100%;
+	float: right;
+	background-color:#DBF6F4;
+}
+
+
+.sub-top {
+	width: 100%;
+	height: 10%;
+	background-color: white;
+	position: relative;
+	
+}
+.sub-bottom {
+	width: 100%;
+	height: 90%;
+	position: relative;
+	overflow: hidden;
+}
+
+.content {
+	height: 50%;
+	width: 90%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.right-button {
+	float: right;
+	height: 100%;
+	width: 10%;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 3px;
+	position: relative;
+	cursor: pointer;
+}
+.right-button p {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.right-button:hover {
+	background-color: #3AAFA9;
+	border: 1px solid #3AAFA9;
+	color: white;
+}
+.icon-question {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 0;
+}
+.questionmarkk{
+	width: 80% ;
+	height: 80%;
+}
+.questionmarkk:hover{
+	width: 90% ;
+	height: 90%;
+}
+
+.icon-gallery {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.dob_element{
+    width: 20%;
+    float: right;
+    margin-right: 15%;
+    border:transparent;
+    font-size: 200%;
+    background-color: transparent;
+    color: teal;
+    padding: 9px;
+
+  }
+.bottom-top {
+    margin: 0;
+	width: 90%;
+	height: 10%;
+    margin-left: 10%;
+    margin-top: 2%;
+	position: relative;  
+}
+.bottom-middle {
+    margin: 0;
+	width: 90%;
+	height: 15%;
+	margin-left: 10%;
+	position: relative;  
+}
+.option_1 {
+    width: 35%;
+    height:100%;
+    float: left;
+    text-align: right;
+    margin-right: 15%;
+    color: teal;
+    font-size: 150%;
+}
+.option_2 {
+    width: 35%;
+    height:100%;
+    float: left;
+    text-align: right;
+    color: teal;
+    font-size: 150%;
+}
+.frame {
+	margin: 0;
+	width: 90%;
+	height: 50%;
+	margin-left: 10%;
+	margin-top: 0%;
+	position: relative;
+}
+.sub-left {
+	background-color: #F5FCFB;
+	float: left;
+	height: 100%;
+	width: 35%;
+	border-radius: 10px;
+	position: relative;
+}
+.sub-left img {
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    width: 15%;
+    height: 30%;
+	transform: translate(-50%,-50%);
+    object-fit: cover;
+	position: center;
+}
+.sub-right {
+    background-color: white;
+    float: left;
+	height: 100%;
+    width: 35%;
+	border-radius: 10px;
+    position: relative;
+	
+}
+.middle {
+	float: left;
+	height: 100%;
+	width: 15%;
+	border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+.middle p{
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%,-50%);
+    color: teal;
+    font-size: 200%;
+}

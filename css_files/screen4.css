@@ -133,10 +133,12 @@ body {
 	position: relative;
 	align-items: left;
 }
-.sub-left img {
+.sub-left audio {
 	position: absolute;
 	top: 50%;
-	left: 50%;
+	left: 30%;
+	width: 50%;
+	min-width: 100px;
 	transform: translate(-50%,-50%);
 }
 .sub-right {
