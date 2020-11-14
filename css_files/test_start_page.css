@@ -1,0 +1,162 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+.main {
+	content: '';
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	
+}
+
+.container-right {
+	width: 100%;
+	height: 100%;
+	float: right;
+	background-color:#F5FCFB;
+}
+
+
+.sub-top {
+	width: 100%;
+	height: 10%;
+	background-color: white;
+	position: relative;
+	
+}
+.sub-bottom {
+	width: 100%;
+	height: 90%;
+	position: relative;
+	overflow: hidden;
+	
+}
+.sub-bottom p {
+	font-size: 200%;
+	margin-top: 2%;
+	text-align: center;
+	align-items: center;
+}
+.content {
+	height: 50%;
+	width: 90%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.left-bar {
+	height: 60%;
+	width: 40%;
+	background-color: #DBF6F4;
+	float: left;
+	margin: 0;
+	margin-top: 0.75%;
+	border-radius: 20px;
+	position: relative;
+	
+}
+.left-bar:before {
+	content: ' ';
+	width: 16.5%;
+	height: 100%;
+	background-color: #3AAFA9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 20px;
+}
+.right-button {
+	float: right;
+	height: 100%;
+	width: 10%;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 3px;
+	position: relative;
+	cursor: pointer;
+}
+.right-button p {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.right-button:hover {
+	background-color: #3AAFA9;
+	border: 1px solid #3AAFA9;
+	color: white;
+}
+
+.frame {
+	margin: 0;
+	width: 90%;
+	height: 50%;
+	margin-left: 8%;
+	margin-top: 10%;
+	position: relative;
+}
+.sub-left {
+	float: left;
+	height: 100%;
+    width: 50%;
+    margin-left: 5%;
+	border-radius: 20px;
+	position: relative;
+}
+.sub-left img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.sub-right {
+	float: left;
+	height: 100%;
+	width: 40%;
+	
+}
+.box {
+	display: inline-block;
+	height: 50%;
+	width: 60%;
+	margin-top: 20%;
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-bottom: 5%;
+	align-items: center;
+	position: relative;
+}
+.box button {
+	background-color: #3AAFA9;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 1% 2%;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+    font-size: 16px;
+    padding: 2% 8%;
+    margin-top: 3%;
+}
+.heading {
+    font-size: 200%;
+	word-wrap: break-word;
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.text {
+    font-size: 120%;
+	word-wrap: break-word;
+    position: relative;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
