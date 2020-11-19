@@ -33,23 +33,20 @@ def login():
         return redirect(url_for('index'))
 
 
-@app.route('/register', methods=['POST', 'GET'])
-def register():
-    print(request.method)
+@app.route('/register1', methods=['POST', 'GET'])
+def register_1():
     if request.method == 'POST':
-        users = mongo.db.users
-        e_u = users.find_one({'name': request.form['username']})
-        if e_u is None:
-            hashpassword = bcrypt.hashpw(
-                request.form['pass'].encode('utf-8'), bcrypt.gensalt())
-            users.insert(
-                {'name': request.form['username'], 'password': hashpassword})
-            session['username'] = request.form['username']
-            return redirect(url_for('index'))
-        else:
-            return 'That username already exists'
+        users = mongo.db.register1
+        users.insert(
+            {'name': request.form['lemail']})
+        return redirect(url_for('register_2'))
     else:
-        return render_template('register.html')
+        return render_template('DyslexiaScreen_After_1.html')
+
+
+@app.route('/register2', methods=['POST', 'GET'])
+def register_2():
+    return render_template("DyslexiaScreen_After_2.html")
 
 
 if (__name__ == '__main__'):
