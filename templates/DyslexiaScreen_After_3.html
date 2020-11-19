@@ -76,8 +76,9 @@
                         <div class = "col-lg-2 code_entry_box"></div>
                     </div>
                     <p class = "cant_see_link">Didn't receive the code?</p>
-                    <button class = "resend_button">Resend Code</button>
-
+                    <form action="{{ url_for('register_4') }}" >
+                    <button type="submit" class = "resend_button">Resend Code</button>
+                  </form>
                 </div>
                
               </div>
