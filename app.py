@@ -59,6 +59,11 @@ def register_4():
     return render_template("DyslexiaScreen_After_4.html")
 
 
+@app.route('/prequestion1', methods=['POST', 'GET'])
+def pre_question1():
+    return render_template("DyslexiaScreen1.html")
+
+
 if (__name__ == '__main__'):
     app.secret_key = "abcd"
     app.run(debug=True)
