@@ -16,8 +16,7 @@ mongo = PyMongo(app)
 def index():
     if 'username' in session:
         print("successful")
-    # return render_template("index.html")
-    return render_template("LoginScreen.html")
+    return render_template("keybaord.html")
 
 
 @app.route('/login', methods=['POST'])
@@ -33,6 +32,27 @@ def login():
         return redirect(url_for('index'))
 
 
+@app.route('/temp', methods=['POST', 'GET'])
+def temp():
+    print(request.method)
+    if request.method == 'POST':
+
+        users = mongo.db.users
+        existing_user = users.find_one({'name': request.form['username']})
+
+        if existing_user is None:
+            hashpass = bcrypt.hashpw(
+                request.form['pass'].encode('utf-8'), bcrypt.gensalt())
+            users.insert(
+                {'name': request.form['username'], 'password': hashpass})
+            session['username'] = request.form['username']
+            return redirect(url_for('index'))
+        return 'That username already exists!'
+    else:
+        print("error")
+        return render_template('register.html')
+
+
 @app.route('/register1', methods=['POST', 'GET'])
 def register_1():
     if request.method == 'POST':
@@ -46,22 +66,35 @@ def register_1():
 
 @app.route('/register2', methods=['POST', 'GET'])
 def register_2():
+    print(request.method)
     return render_template("DyslexiaScreen_After_2.html")
 
 
 @app.route('/register3', methods=['POST', 'GET'])
 def register_3():
+    print(request.method)
     return render_template("DyslexiaScreen_After_3.html")
 
 
 @app.route('/register4', methods=['POST', 'GET'])
 def register_4():
+    print(request.method)
     return render_template("DyslexiaScreen_After_4.html")
 
 
 @app.route('/prequestion1', methods=['POST', 'GET'])
 def pre_question1():
     return render_template("DyslexiaScreen1.html")
+
+
+@app.route('/prequestion2', methods=['POST', 'GET'])
+def pre_question2():
+    return render_template("DyslexiaScreen2.html")
+
+
+@app.route('/q1', methods=['POST', 'GET'])
+def q1():
+    return render_template("screen2.html")
 
 
 if (__name__ == '__main__'):
