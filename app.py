@@ -16,7 +16,7 @@ mongo = PyMongo(app)
 def index():
     if 'username' in session:
         print("successful")
-    return render_template("keybaord.html")
+    return render_template("LoginScreen.html")
 
 
 @app.route('/login', methods=['POST'])
