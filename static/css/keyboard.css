@@ -46,7 +46,9 @@
 .keyboard__key:active {
     background: rgba(255, 255, 255, 0.12);
 }
-
+.keyboard__key:hover {
+    background: #3AAFA9;
+}
 .keyboard__key--wide {
     width: 12%;
 }
