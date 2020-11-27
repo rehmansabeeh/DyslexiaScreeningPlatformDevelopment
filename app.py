@@ -110,6 +110,7 @@ def create_profile_1():
         # day = request.form['dob-day']
 
         selected_gender = request.form['selected']
+        print(selected_gender)
         return redirect(url_for('create_profile_2'))
 
     else:
