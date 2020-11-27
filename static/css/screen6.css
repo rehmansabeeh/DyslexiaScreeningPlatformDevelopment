@@ -218,4 +218,9 @@ body {
 	background-color: #3AAFA9;
 	border-radius: 20px;
 }
+.selected{
+	background-color: #3AAFA9;
+	border: 1px solid #3AAFA9;
+	color: white;    
+}
 
