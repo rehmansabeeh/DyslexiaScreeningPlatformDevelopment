@@ -10,13 +10,14 @@ app.config['MONGO_DBNAME'] = 'TESTLOGIN'
 app.config['MONGO_URI'] = "mongodb+srv://sabeeh:sabeeh123@cluster0.etpsv.gcp.mongodb.net/TESTLOGIN?retryWrites=true&w=majority"
 session = {}
 mongo = PyMongo(app)
+abc = {"name": "Sabeeh"}
 
 
 @app.route('/')
 def index():
     if 'username' in session:
         print("successful")
-    return render_template("LoginScreen.html")
+    return render_template("LoginScreen.html", data=abc)
 
 
 @app.route('/login', methods=['POST'])
@@ -47,7 +48,7 @@ def temp():
             return redirect(url_for('index'))
         return 'That username already exists!'
     else:
-        return render_template('register.html')
+        return render_template('register.html', data=abc)
 
 
 @app.route('/register1', methods=['POST', 'GET'])
@@ -99,38 +100,20 @@ def register_4():
 
 @app.route('/create_profile_1', methods=['POST', 'GET'])
 def create_profile_1():
-    print("methord is : ", request.method)
+    print("method is : ", request.method)
+    # users = mongo.db.users
+    # lusers = users.find_one({'name': request.form['username']})
     if request.method == 'POST':
-        print("HEREERHEHR")
-        print(request.form['dob-month'])
-        print(request.form['lname'])
+        # month = request.form['dob-month']
+        # name = request.form['lname']
+        # year = request.form['dob-year']
+        # day = request.form['dob-day']
+
+        selected_gender = request.form['selected']
         return redirect(url_for('create_profile_2'))
 
     else:
         return render_template('DyslexiaScreen1.html')
-
-    # if request.form.get('gender_reached_or_not') == 'success':
-    #     gender = request.form.get('gender')
-    #     # should be stored in DB
-    #     return json.dumps({'abc': 'successfuly noted gender'})
-    # else:
-    #     return json.dumps({'abc': 'couldn''t store gender'})
-
-    # if request.form.get('date_reached_or_not') == 'success':
-    #     day = request.form.get('day_selected')
-    #     month = request.form.get('month_selected')
-    #     year = request.form.get('year_selected')
-    #     # should be stored in DB
-    #     return json.dumps({'abc': 'successfuly noted DOB'})
-    # else:
-    #     return json.dumps({'abc': 'couldn''t store DOB'})
-
-    # if request.form.get('gender_reached_or_not') == 'success':
-    #     gender = request.form.get('gender')
-    #     # should be stored in DB
-    #     return json.dumps({'abc': 'successfuly noted gender'})
-    # else:
-    #     return json.dumps({'abc': 'couldn''t store gender'})
 
 
 @app.route('/create_profile_2', methods=['POST', 'GET'])
