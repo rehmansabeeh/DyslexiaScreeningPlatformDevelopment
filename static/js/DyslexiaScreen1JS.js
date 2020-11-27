@@ -66,7 +66,19 @@ else{
         });
 }
 no_of_clicks_male++;
-});
+$.ajax({
+    url:"create_profile", //the page containing python script
+    type: "post", //request type,
+    dataType: 'json',
+    data: { gender_reached_or_not: "success" , gender: "male"},
+    success:function(result){
+    console.log(result.abc);
+          }
+        });
+
+
+    
+    });
 
 $('.gender_selection_female').click(function() {
     selected_gender = "Female";
@@ -109,6 +121,15 @@ else{
         });
 }
 no_of_clicks_female++;
+$.ajax({
+    url:"create_profile", //the page containing python script
+    type: "post", //request type,
+    dataType: 'json',
+    data: {gender_reached_or_not: "success" , gender: "female"},
+    success:function(result){
+    console.log(result.abc);
+          }
+        });
 });
 
 $('.gender_selection_other').click(function() {
@@ -151,20 +172,40 @@ else{
         });
 }
 no_of_clicks_other++;
+$.ajax({
+    url:"create_profile", //the page containing python script
+    type: "post", //request type,
+    dataType: 'json',
+    data: {gender_reached_or_not: "success" , gender: "other"},
+    success:function(result){
+    console.log(result.abc);
+          }
+        });
 });
 console.log(selected_gender);
 // Selecting date of birth
-var date;
+var day;
 var month;
 var year;
 $('#dob-day').click(function(){
-    date = $('#dob-day option:selected').text();
+    day = $('#dob-day option:selected').text();
+    
 });
 $('#dob-month').click(function(){
     month = $('#dob-month option:selected').text();
     console.log(month);
+    
 });
 $('#dob-year').click(function(){
     year = $('#dob-year option:selected').text();
-});
+    });
+$.ajax({
+    url:"create_profile_1", //the page containing python script
+    type: "post", //request type,
+    dataType: 'json',
+    data: {date_reached_or_not: "success", day_selected: day , month_selected: month, year_selected: year },
+    success:function(result){
+    console.log(result.abc);
+            }
+        });
 })(jQuery);
