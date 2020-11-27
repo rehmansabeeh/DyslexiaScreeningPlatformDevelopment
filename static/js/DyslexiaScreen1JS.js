@@ -16,56 +16,62 @@ function move() {
     }
   }
 }
-// var no_of_clicks_male = 0;
-// var no_of_clicks_female = 0;
-// var no_of_clicks_other = 0;
-// var selected_gender;
-// (function ($) {
-//     "use strict";
+var no_of_clicks_male = 0;
+var no_of_clicks_female = 0;
+var no_of_clicks_other = 0;
+var selected_gender;
+(function ($) {
+    "use strict";
     
-//     // First we store the name user entered
-//     var entered_name = $("#lname").value;
-//     $('.gender_selection_male').click(function() {
-//     selected_gender = "Male";
-//     $('.gender_selection_female').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//     $('.gender_selection_other').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//         if(no_of_clicks_female%2 != 0){
-//             no_of_clicks_female++;
-//         }
-//         if(no_of_clicks_other%2 != 0){
-//             no_of_clicks_other++;
-//         }
+    // First we store the name user entered
+    var entered_name = $("#lname").value;
+    $('.gender_selection_male').click(function() {
+    selected_gender = "Male";
+    
+
+    $('.gender_selection_female').attr('name' , 'not-selected') 
+    $('.gender_selection_other').attr('name' , 'not-selected')
+    $('.gender_selection_male').attr('name' , 'selected')
+    
+    $('.gender_selection_female').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
+    $('.gender_selection_other').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
+        if(no_of_clicks_female%2 != 0){
+            no_of_clicks_female++;
+        }
+        if(no_of_clicks_other%2 != 0){
+            no_of_clicks_other++;
+        }
         
         
 
-//         if(no_of_clicks_male%2 == 0){
+        if(no_of_clicks_male%2 == 0){
 
-//     $('.gender_selection_male').css({
-//     'border': 'none',
-//     'border-radius': '6px',
-//     'background-color': '#3AAFA9',
-//     'color': '#fff'
-//     });
-// }
-// else{
-//     $('.gender_selection_male').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-// }
-// no_of_clicks_male++;
+    $('.gender_selection_male').css({
+    'border': 'none',
+    'border-radius': '6px',
+    'background-color': '#3AAFA9',
+    'color': '#fff'
+    });
+}
+else{
+    $('.gender_selection_male').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
+}
+no_of_clicks_male++;
 // $.ajax({
 //     url:"create_profile", //the page containing python script
 //     type: "post", //request type,
@@ -78,49 +84,54 @@ function move() {
 
 
     
-//     });
+    });
 
-// $('.gender_selection_female').click(function() {
-//     selected_gender = "Female";
-//     $('.gender_selection_male').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//     $('.gender_selection_other').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
+$('.gender_selection_female').click(function() {
+    selected_gender = "Female";
+
+    $('.gender_selection_male').attr('name' , 'not-selected') 
+    $('.gender_selection_other').attr('name' , 'not-selected') 
+    $('.gender_selection_female').attr('name' , 'selected')
+
+    $('.gender_selection_male').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
+    $('.gender_selection_other').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
         
-//         if(no_of_clicks_male%2 != 0){
-//             no_of_clicks_male++;
-//         }
-//         if(no_of_clicks_other%2 != 0){
-//             no_of_clicks_other++;
-//         }
+        if(no_of_clicks_male%2 != 0){
+            no_of_clicks_male++;
+        }
+        if(no_of_clicks_other%2 != 0){
+            no_of_clicks_other++;
+        }
         
 
-//         if(no_of_clicks_female%2 == 0){
+        if(no_of_clicks_female%2 == 0){
 
-//     $('.gender_selection_female').css({
-//     'border': 'none',
-//     'border-radius': '6px',
-//     'background-color': '#3AAFA9',
-//     'color': '#fff'
-//     });
-// }
-// else{
-//     $('.gender_selection_female').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-// }
-// no_of_clicks_female++;
+    $('.gender_selection_female').css({
+    'border': 'none',
+    'border-radius': '6px',
+    'background-color': '#3AAFA9',
+    'color': '#fff'
+    });
+}
+else{
+    $('.gender_selection_female').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
+}
+no_of_clicks_female++;
 // $.ajax({
 //     url:"create_profile", //the page containing python script
 //     type: "post", //request type,
@@ -130,48 +141,53 @@ function move() {
 //     console.log(result.abc);
 //           }
 //         });
-// });
+});
 
-// $('.gender_selection_other').click(function() {
-//     selected_gender = "Other";
-//     $('.gender_selection_male').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//     $('.gender_selection_female').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//         if(no_of_clicks_male%2 != 0){
-//             no_of_clicks_male++;
-//         }
-//         if(no_of_clicks_female%2 != 0){
-//             no_of_clicks_female++;
-//         }
+$('.gender_selection_other').click(function() {
+    selected_gender = "Other";
+
+    $('.gender_selection_male').attr('name' , 'not-selected') 
+    $('.gender_selection_female').attr('name' , 'not-selected')
+    $('.gender_selection_other').attr('name' , 'selected')
+
+    $('.gender_selection_male').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
+    $('.gender_selection_female').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
+        if(no_of_clicks_male%2 != 0){
+            no_of_clicks_male++;
+        }
+        if(no_of_clicks_female%2 != 0){
+            no_of_clicks_female++;
+        }
         
     
-//         if(no_of_clicks_other%2 == 0){
+        if(no_of_clicks_other%2 == 0){
 
-//     $('.gender_selection_other').css({
-//     'border': 'none',
-//     'border-radius': '6px',
-//     'background-color': '#3AAFA9',
-//     'color': '#fff'
-//     });
-// }
-// else{
-//     $('.gender_selection_other').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-// }
-// no_of_clicks_other++;
+    $('.gender_selection_other').css({
+    'border': 'none',
+    'border-radius': '6px',
+    'background-color': '#3AAFA9',
+    'color': '#fff'
+    });
+}
+else{
+    $('.gender_selection_other').css({
+        'border': 'none',
+        'border-radius': '6px',
+        'background-color': '#ddd',
+        'color': '#C6C1C3'
+        });
+}
+no_of_clicks_other++;
 // $.ajax({
 //     url:"create_profile", //the page containing python script
 //     type: "post", //request type,
@@ -181,9 +197,9 @@ function move() {
 //     console.log(result.abc);
 //           }
 //         });
-// });
-// console.log(selected_gender);
-// // Selecting date of birth
+});
+console.log(selected_gender);
+// Selecting date of birth
 // var day;
 // var month;
 // var year;
@@ -208,4 +224,9 @@ function move() {
 //     console.log(result.abc);
 //             }
 //         });
-// })(jQuery);
+// $('.next_button').click(function(){
+    
+// });
+        
+    
+})(jQuery);
