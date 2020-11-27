@@ -12,18 +12,19 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
   <!-- Bootstrap CSS File -->
-  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
   <!-- Libraries CSS Files -->
   <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   
   <!-- Main Stylesheet File -->
-  <link href="../static/css/DyslexiaScreen1Style.css" rel="stylesheet">
-
+  <link href="../static/css/DyslexiaScreen1.css" rel="stylesheet">
+  
   <!--JavaScript File-->
   
   <!-- =======================================================
@@ -67,38 +68,32 @@
                 <p>Name</p>
                 <div class = "row closer_top">
                     <div class = "col-lg-12 name_form">
-                        <form action="" >
-                            <input type="text" id="lname" name="lname" placeholder="Your name.." style = "width: 100%;padding: 10px;border: 1px solid #B4ADB0;border-radius: 7px;">
-                        </form>
+                         <form action="{{ url_for('create_profile_1') }}" method= POST >
+                           <input type="text" id="lname" name="lname" placeholder="Your name.." style = "width: 100%; padding: 10px;border: 1px solid #B4ADB0;border-radius: 7px;">
                     </div>
                 </div>
                 <div class = "clearfix"></div>
                 <p>Gender</p>
 
-                <div class = "row closer_top">
+                  <div class = "row closer_top">
                     <div class = "col-lg-4 name_form">
                         <button class = "gender_selection_male"><i class="fa fa-male gender_icon_male" aria-hidden="true"></i>Male</button>
-                        <!-- <form action="" >
-                            <input type="text" id="lname" name="lname" placeholder="Your name" style = "width: 100%; padding: 10px;">
-                        </form> -->
-                    </div>
+                   
+                   </div>
                     <div class = "col-lg-4 name_form">
                         <button class = "gender_selection_female"><i class="fa fa-female gender_icon_female" aria-hidden="true"></i> Female</button>
-                        <!-- <form action="" >
-                            <input type="text" id="lname" name="lname" placeholder="Your name" style = "width: 100%; padding: 10px;">
-                        </form> -->
+                     
                     </div>
                     <div class = "col-lg-4 name_form">
                         <button class = "gender_selection_other"> Other</button>
-                        <!-- <form action="" >
-                            <input type="text" id="lname" name="lname" placeholder="Your name" style = "width: 100%; padding: 10px;">
-                        </form> -->
+                     
                     </div>
-                </div>
+                </div>  
+                
                 <div class = "clearfix"></div>
                 <p>Date of Birth</p>
                 <!-- <label for="dob-day" class="control-label">Date of birth</label> -->
-                <div class = "row closer_top">
+                 <div class = "row closer_top">
                     
                     <div class = "col-lg-3">
                         <select name="dob-day" id="dob-day" class = "dob_element">
@@ -278,9 +273,9 @@
                          
                         
                       </div>
-                    
+                     
                 </div>
-              
+             
               <div class = "col-lg-6">
                 
                 <p style = "color: #3AAFA9; margin-top: 10px;">Step 1/3</p>
@@ -292,7 +287,8 @@
               </div>
           </div>
           <div class = "clearfix"></div>
-          <button class = "darkgreen next_button">NEXT</button>
+          <button class = "darkgreen next_button" type="submit"  value="Submit">NEXT</button>
+       
           <div class = "clearfix"></div>
           <div class = "clearfix"></div>
           <div class = "clearfix"></div>
@@ -300,16 +296,7 @@
         <div class = "clearfix"></div>
         <div class = "clearfix"></div>
         <div class = "clearfix"></div>
-
-      <!-- <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="lib/easing/easing.min.js"></script>
-      <script src="lib/mobile-nav/mobile-nav.js"></script>
-      <script src="lib/wow/wow.min.js"></script>
-      <script src="lib/waypoints/waypoints.min.js"></script>
-      <script src="lib/counterup/counterup.min.js"></script>
-      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-      <script src="lib/isotope/isotope.pkgd.min.js"></script> -->
-      <!-- <script src="lib/lightbox/js/lightbox.min.js"></script> -->
+      </form>
       <script src="../static/lib/jquery/jquery.min.js"></script>
       <script src="../static/lib/jquery/jquery-migrate.min.js"></script>
       <script src="../static/lib/mobile-nav/mobile-nav.js"></script>
