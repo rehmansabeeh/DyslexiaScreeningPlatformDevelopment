@@ -109,8 +109,8 @@ def create_profile_1():
         # year = request.form['dob-year']
         # day = request.form['dob-day']
 
-        selected_gender = request.form['selected']
-        print(selected_gender)
+        # selected_gender = request.form['selected']
+        # print(selected_gender)
         return redirect(url_for('create_profile_2'))
 
     else:
@@ -122,14 +122,126 @@ def create_profile_2():
     print("methord is : ", request.method)
     if request.method == 'POST':
         print("HEREERHEHR")
-        return redirect(url_for('q1'))
+        return redirect(url_for('q1start'))
     else:
         return render_template('DyslexiaScreen2.html')
 
 
+@app.route('/q1start', methods=['POST', 'GET'])
+def q1start():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q1'))
+    else:
+        return render_template("test1_start_page.html")
+
+
 @app.route('/q1', methods=['POST', 'GET'])
 def q1():
-    return render_template("screen2.html")
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q2start'))
+    else:
+        return render_template("screen2.html")
+
+
+@app.route('/q2start', methods=['POST', 'GET'])
+def q2start():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q2'))
+    else:
+        return render_template("test2_start_page.html")
+
+
+@app.route('/q2', methods=['POST', 'GET'])
+def q2():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q3start'))
+    else:
+        return render_template("screen3.html")
+
+
+@app.route('/q3start', methods=['POST', 'GET'])
+def q3start():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q3'))
+    else:
+        return render_template("test5_start_page.html")
+
+
+@app.route('/q3', methods=['POST', 'GET'])
+def q3():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q4start'))
+    else:
+        return render_template("screen4.html")
+
+
+@app.route('/q4start', methods=['POST', 'GET'])
+def q4start():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q4'))
+    else:
+        return render_template("test6_start_page.html")
+
+
+@app.route('/q4', methods=['POST', 'GET'])
+def q4():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q5start'))
+    else:
+        return render_template("screen5.html")
+
+
+@app.route('/q5start', methods=['POST', 'GET'])
+def q5start():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q5'))
+    else:
+        return render_template("test7_start_page.html")
+
+
+@app.route('/q5', methods=['POST', 'GET'])
+def q5():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q6start'))
+    else:
+        return render_template("screen6.html")
+
+
+@app.route('/q6start', methods=['POST', 'GET'])
+def q6start():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q6'))
+    else:
+        return render_template("test8_start_page.html")
+
+
+@app.route('/q6', methods=['POST', 'GET'])
+def q6():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q7'))
+    else:
+        return render_template("screen7.html")
+
+
+@app.route('/q7', methods=['POST', 'GET'])
+def q7():
+    print("methord is : ", request.method)
+    if request.method == 'POST':
+        return redirect(url_for('q7'))
+    else:
+        return render_template("screen8.html")
 
 
 if (__name__ == '__main__'):
