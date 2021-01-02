@@ -95,12 +95,21 @@ body {
 	position: relative;
 	cursor: pointer;
 }
-.right-button p {
+.right-button button {
 	margin: 0;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
+	background-color: #3AAFA9;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 8.5% 40%;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+    font-size: 16px;
 }
 .right-button:hover {
 	background-color: #3AAFA9;

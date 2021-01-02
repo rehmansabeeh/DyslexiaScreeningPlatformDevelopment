@@ -8,7 +8,7 @@ body {
 
   
 .middle{
- 
+ margin-top: 5.2%;
  height: 70%;
  width: 100%;
  float: left;
@@ -90,7 +90,7 @@ body {
 }
 .another_bottom{
     background-color: white;
-    height: 80%;
+    height: 95%;
     width: 100%;
     float: left;
     align-items: center;
@@ -98,7 +98,7 @@ body {
 }
 .second_last{
     background-color:#F5FCFB;
-    height: 80%;
+    height: 95%;
     width: 100%;
     float: left;
     align-items: center;
