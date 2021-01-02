@@ -1,0 +1,172 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	
+}
+.main {
+	content: '';
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	
+}
+
+.container-left{
+	width: 12%;
+	height: 100%;
+	float: left;
+	background-color: #3AAFA9;
+	position: relative;
+}
+.container-right {
+	width: 88%;
+	height: 100%;
+	float: right;
+	background-color:#DBF6F4;
+}
+
+
+.sub-top {
+	width: 100%;
+	height: 10%;
+	background-color: white;
+}
+
+.sub-bottom {
+	width: 100%;
+	height: 90%;
+	position: relative;
+	overflow: hidden;
+}
+.sub-bottom button {
+	background-color: #3AAFA9;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 1% 2%;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+    font-size: 16px;
+    padding: 2% 8%;
+	margin-top: 3%;
+	float: right;
+	margin-right: 10%;
+}
+.content {
+	height: 50%;
+	width: 90%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.left-bar {
+	height: 60%;
+	width: 40%;
+	background-color: #DBF6F4;
+	float: left;
+	margin: 0;
+	margin-top: 10px;
+	border-radius: 20px;
+	position: relative;
+	
+}
+.left-bar:before {
+	content: ' ';
+	width: 16.5%;
+	height: 100%;
+	background-color: #3AAFA9;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 20px;
+}
+.right-button {
+	float: right;
+    height: 100%;
+    color: #2B7A78;
+    width: 10%;
+    background-color: white;
+    border: 1px solid #3AAFA9;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+.right-button p {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.right-button:hover {
+	background-color: #3AAFA9;
+	border: 1px solid #3AAFA9;
+	color: white;
+}
+.info_collection{
+  	border: 1px solid #fff;
+	border-radius: 14px;
+	position: relative;
+	background-color: #F5FCFB;
+	top: 66.5px;
+	text-align: center;
+	padding-bottom: 0px;
+}
+.info_collection h3{
+  margin-top: 3%;
+}
+.test_taker_gender{
+	height: auto;
+    width: 26%;
+    margin: 11%;
+    float: left;
+    background-color: #F5FCFB;
+    transition: 0.5s ease;
+}
+.test_taker_gender:hover{
+  background-color: #DBF6F4;
+  border: 1px solid #3AAFA9;
+
+}
+.test_taker_gender figure{
+	background-color: 
+}
+.test_taker_gender figure figcaption{
+	margin-top: 13px;
+}
+.test_taker_gender_container{
+	background-color: #F5FCFB;
+    margin-top: -6%;
+    margin-left: 10%;
+}
+.test_taker_gender_container_2{
+	margin-left: 8%;
+}
+
+.next_button {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  margin-left: 46%;
+  color: #fff;
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 6px;
+}
+.darkgreen {
+  background-color: #3aafa9;
+}
+#lo
+.clearfix{
+  clear: both;
+  margin-top: 40px;
+}

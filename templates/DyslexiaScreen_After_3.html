@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
   <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -67,7 +67,7 @@
                 <div class = "clearfix"></div>
                 <div class = "light_grey_line col-lg-12"></div>
                 <div class = "email_sending_text">
-                    <p>We have sent a code to {The Number}</p>
+                    <p>We have sent a code to <b>{{data.phone_no_link_is_to_be_sent}}</b></p>
                     <p>Enter the code below:</p>
                     <div class = "row">
                         <div class = "col-lg-2 code_entry_box"></div>
@@ -76,8 +76,8 @@
                         <div class = "col-lg-2 code_entry_box"></div>
                     </div>
                     <p class = "cant_see_link">Didn't receive the code?</p>
-                    <form action="{{ url_for('register_3') }}" method="POST" >
-                    <button type="submit" class = "resend_button">Resend Code</button>
+                    <form action="{{ url_for('register_4') }}" >
+                    <button type="submit" class = "resend_button">Resend Link</button>
                   </form>
                 </div>
                

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NewBiz Bootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <!-- Bootstrap CSS File -->
+  <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+  <!-- Main Stylesheet File -->
+  <link href="../static/css/DyslexiaScreen3Style.css" rel="stylesheet">
+  
+  <!--JavaScript File-->
+  
+  <!-- =======================================================
+    Theme Name: NewBiz
+    Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container">
+    
+          <div class="logo float-left">
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+            <!-- <a href="#intro" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+            <h1 style="color: #2B7A78; font-weight: 500; font-size: 40px;">Q4D</h1>
+          </div>
+    
+          <nav class="main-nav float-right d-none d-lg-block col-lg-6">
+            <ul>
+              <li class="active"><a href="#intro">Screening Test</a></li>
+              <li><a href="#about">What's Dyslexia?</a></li>
+              <li><a href="#services">About Us</a></li>
+              <li class = "button_element"><button class  = "darkgreen" id = "login_button">LOGIN</button></li>
+              
+            </ul>
+          </nav><!-- .main-nav -->
+          
+        </div>
+      </header><!-- #header -->
+      <div class = "container center info_collection">
+        <div class="clearfix"></div>  
+        <div class = "row">
+              <div class = "col-lg-6">
+                <h2 style = "color: #2B7A78;font-weight: 600;font-size: 40px;">Create Profile</h2>
+                <p>Create a profile of the user who will take the test</p>
+                <div class = "light_grey_line col-lg-12"></div>
+                <p>Is Urdu your first language?</p>
+                <!-- <div class = "row closer_top">
+                    <div class = "col-lg-12 name_form">
+                
+                           <input type="text" id="lname" name="lname" placeholder="Your name.." style = "width: 100%; padding: 10px; border: 1px solid #B4ADB0;border-radius: 7px;" required>
+                    </div>
+                </div>
+                 -->
+                <div class = "clearfix"></div>
+
+                <form action="{{ url_for('create_profile_3') }}" method= POST id = "form1">
+                <div class = "row closer_top">
+                  <!-- <form action="{{ url_for('create_profile_3') }}" method= POST id = "form1"> -->
+                    <div class = "col-lg-4 name_form">
+                    <!-- <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br> -->
+                    <!-- SHOULD CHANGE TO DIV ELEMENT -->
+                        <div class = "first_language_1"><label for="Yes"><i class="fa fa-check" aria-hidden="true"></i> Yes</label><br></div>
+                   <!--  <input id = "education_selection" type="radio" name= "selected" value="Male" required/>
+                    <label for="School">School</label><br> -->
+                    </div>
+
+                  <div class = "col-lg-4 name_form">
+                    <!-- <input id = "education_selection" type="radio" name= "selected" value="Female" required/>
+                    <label for="College">College</label><br> -->
+                        <div class = "first_language_2"><label for="Yes"><i class="fa fa-times" aria-hidden="true"></i> No</label><br></div>
+                  </div>
+
+                  <!-- <div class = "col-lg-4 name_form">
+                    <input id = "education_selection" type="radio" name= "selected" value="Other" required/>
+                    <label for="University">University</label><br>
+                    <div class = "yes_or_no_decision first_language_decision">University</div>
+                  </div> -->
+                </div>
+                <div class = "clearfix"></div>
+                <p>Are you Bilingual?</p>
+
+                <div class = "row closer_top">
+                  <!-- <form action="{{ url_for('create_profile_3') }}" method= POST id = "form1"> -->
+                    <div class = "col-lg-4 name_form">
+                    <!-- <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br> -->
+                    <!-- SHOULD CHANGE TO DIV ELEMENT -->
+                        <div class = "bilingual_1"><label for="Yes"><i class="fa fa-check" aria-hidden="true"></i> Yes</label><br></div>
+                   <!--  <input id = "education_selection" type="radio" name= "selected" value="Male" required/>
+                    <label for="School">School</label><br> -->
+                    </div>
+
+                  <div class = "col-lg-4 name_form">
+                    <!-- <input id = "education_selection" type="radio" name= "selected" value="Female" required/>
+                    <label for="College">College</label><br> -->
+                        <div class = "bilingual_2"><label for="Yes"><i class="fa fa-times" aria-hidden="true"></i> No</label><br></div>
+                  </div>
+
+                  <!-- <div class = "col-lg-4 name_form">
+                    <input id = "education_selection" type="radio" name= "selected" value="Other" required/>
+                    <label for="University">University</label><br>
+                    <div class = "yes_or_no_decision first_language_decision">University</div>
+                  </div> -->
+                </div>  
+                
+                <div class = "clearfix"></div>
+                <p>How often do you read/write in Urdu nowadays?</p>
+                <!-- <label for="dob-day" class="control-label">Date of birth</label> -->
+                 <div class = "row closer_top">
+                    <div class = "col-lg-4 name_form">
+                    <!-- <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br> -->
+                    <!-- SHOULD CHANGE TO DIV ELEMENT -->
+                        <div class = "frequently_box">Frequently</div>
+                   <!--  <input id = "education_selection" type="radio" name= "selected" value="Male" required/>
+                    <label for="School">School</label><br> -->
+                    </div>
+
+                  <div class = "col-lg-4 name_form">
+                    <!-- <input id = "education_selection" type="radio" name= "selected" value="Female" required/>
+                    <label for="College">College</label><br> -->
+                        <div class = "occassionally_box" id = "occassionally_decision">Occassionally</div>
+                  </div>
+
+                  <div class = "col-lg-4 name_form">
+                    <!-- <input id = "education_selection" type="radio" name= "selected" value="Female" required/>
+                    <label for="College">College</label><br> -->
+                        <div class = "rarely_box">Rarely</div>
+                  </div> 
+                </div>
+                     
+                </div>
+             
+              <div class = "col-lg-6">
+                
+                <p style = "color: #3AAFA9; margin-top: 10px;">Step 3/3</p>
+                <div id="myProgress">
+                    
+                    <div id="myBar"></div>
+                </div>
+                <br>
+              </div>
+          </div>
+          <div class = "clearfix"></div>
+          <div class = end_buttons>
+            <i class="fa fa-arrow-left arrow_button" aria-hidden="true"></i>
+            <button class = "darkgreen next_button">NEXT</button>
+          </div>
+       
+          <div class = "clearfix"></div>
+          <div class = "clearfix"></div>
+        </div>
+        
+      </form>
+      <script src="../static/lib/jquery/jquery.min.js"></script>
+      <script src="../static/lib/jquery/jquery-migrate.min.js"></script>
+      <script src="../static/lib/mobile-nav/mobile-nav.js"></script>
+      <script src="../static/lib/wow/wow.min.js"></script>
+      <script src="../static/js/DyslexiaScreen3JS.js"></script>
+</body>
+</html>
