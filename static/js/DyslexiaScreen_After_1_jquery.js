@@ -74,7 +74,30 @@ var country_code
         }
       });
     });
-
+    console.log("Insid JS")
+    
+    $(".next_button").click(function(){
+      console.log($("#phone").val())
+      console.log($("#lemail").val())
+      if($("#phone").val() == "" && $("#lemail").val() == "")
+      {   
+      }
+      else{
+        console.log("HARARE")
+          if($("#phone").val() != false)
+        { console.log("Email False")
+          $("#lemail").prop('required',false);
+        }
+        
+        else if ($("#lemail").val() != false)
+        { console.log("Phone False")
+          $("#phone").prop('required',false);
+        }
+      }
+    })
+    
+    
+    
     
     var entered_email = $("#lemail").value;
     country_code = $('#countryCode_drop_down:selected').text();

@@ -19,11 +19,8 @@
   <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
-  <!-- Libraries CSS Files -->
-  <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  
   <!-- Main Stylesheet File -->
-  <link href="../static/css/DyslexiaScreen1.css" rel="stylesheet">
+  <link href="../static/css/DyslexiaScreen1Style.css" rel="stylesheet">
   
   <!--JavaScript File-->
   
@@ -68,31 +65,32 @@
                 <p>Name</p>
                 <div class = "row closer_top">
                     <div class = "col-lg-12 name_form">
-                         <form action="{{ url_for('create_profile_1') }}" method= POST>
-                           <input type="text" id="lname" name="lname" placeholder="Your name.." style = "width: 100%; padding: 10px;border: 1px solid #B4ADB0;border-radius: 7px;">
+                         <form action="{{ url_for('create_profile_1') }}" method= POST id = "form1">
+                           <input type="text" id="lname" name="lname" placeholder="Your name.." style = "width: 100%; padding: 10px; border: 1px solid #B4ADB0;border-radius: 7px;" required>
                     </div>
                 </div>
                 <div class = "clearfix"></div>
                 <p>Gender</p>
 
-                <div class = "row closer_top">
+                  <div class = "row closer_top">
                   <div class = "col-lg-4 name_form">
-                
-                    <input type="button" name="selected" value="Male" class="gender_selection_male" required/>
-                    <!-- <button class = "gender_selection_male" type = "button" name = "selected">Male</button> -->
-                 
-                 </div>
-                  <div class = "col-lg-4 name_form">
-                    <input type="button" name="selected" value="Female" class="gender_selection_female" required/>
-                    <!-- <button class = "gender_selection_female" type = "button" name = ""><i class="fa fa-female gender_icon_female" aria-hidden="true"></i> Female</button> -->
-                   
+                    <!-- <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br> -->
+                    <input type="radio" name="selected" value="Male" required/>
+                    <label for="Male">Male</label><br>
                   </div>
+
                   <div class = "col-lg-4 name_form">
-                    <input type="button" name="selected" value="Other" class="gender_selection_other" required/>
-                    <!-- <button class = "gender_selection_other" type = "button" name = ""> Other</button> -->
-                   
+                    <input  type="radio" name="selected" value="Female" required/>
+                    <label for="Female">Female</label><br>
                   </div>
-              </div>
+
+                  <div class = "col-lg-4 name_form">
+                    <input  type="radio" name="selected" value="Other" required/>
+                    <label for="Other">Other</label><br>
+                  </div>
+
+              </div>  
                 
                 <div class = "clearfix"></div>
                 <p>Date of Birth</p>
@@ -100,7 +98,7 @@
                  <div class = "row closer_top">
                     
                     <div class = "col-lg-3">
-                        <select name="dob-day" id="dob-day" class = "dob_element">
+                        <select name="dob-day" id="dob-day" class = "dob_element" required>
                             <option value="">Date</option>
                             <option value="">---</option>
                             <option value="01">01</option>
@@ -137,7 +135,7 @@
                           </select>
                     </div>
                     <div class = "col-lg-4">
-                        <select name="dob-month" id="dob-month" class = "dob_element" >
+                        <select name="dob-month" id="dob-month" class = "dob_element" required>
                             <option value="">Month</option>
                             <option value="">-----</option>
                             <option value="01">January</option>
@@ -156,7 +154,7 @@
                         
                     </div>
                     <div class = "col-lg-3">
-                        <select name="dob-year" id="dob-year" class = "dob_element">
+                        <select name="dob-year" id="dob-year" class = "dob_element" required>
                             <option value="">Year</option>
                             <option value="">----</option>
                             <option value="2012">2012</option>
@@ -291,15 +289,13 @@
               </div>
           </div>
           <div class = "clearfix"></div>
-          <button class = "darkgreen next_button" type="submit"  value="Submit">NEXT</button>
+          <button class = "darkgreen next_button" type="submit"  value="Submit" form = "form1" >NEXT</button>
        
           <div class = "clearfix"></div>
           <div class = "clearfix"></div>
           <div class = "clearfix"></div>
         </div>
-        <div class = "clearfix"></div>
-        <div class = "clearfix"></div>
-        <div class = "clearfix"></div>
+        
       </form>
       <script src="../static/lib/jquery/jquery.min.js"></script>
       <script src="../static/lib/jquery/jquery-migrate.min.js"></script>

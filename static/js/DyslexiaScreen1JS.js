@@ -1,38 +1,34 @@
-// var i = 0;
-// function move() {
-//   if (i == 0) {
-//     i = 1;
-//     var elem = document.getElementById("myBar");
-//     var width = 1;
-//     var id = setInterval(frame, 10);
-//     function frame() {
-//       if (width >= 100) {
-//         clearInterval(id);
-//         i = 0;
-//       } else {
-//         width++;
-//         elem.style.width = width + "%";
-//       }
-//     }
-//   }
-// }
-// var no_of_clicks_male = 0;
-// var no_of_clicks_female = 0;
-// var no_of_clicks_other = 0;
-// var selected_gender;
-// (function ($) {
-//     "use strict";
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+var no_of_clicks_male = 0;
+var no_of_clicks_female = 0;
+var no_of_clicks_other = 0;
+var selected_gender;
+(function ($) {
+    "use strict";
     
-//     // First we store the name user entered
-//     var entered_name = $("#lname").value;
+    // First we store the name user entered
+    var entered_name = $("#lname").value;
 //     $('.gender_selection_male').click(function() {
 //     selected_gender = "Male";
     
-
-//     $('.gender_selection_female').attr('name' , 'not-selected') 
-//     $('.gender_selection_other').attr('name' , 'not-selected')
-//     $('.gender_selection_male').attr('name' , 'selected')
-    
+    console.log(selected_gender);    
 //     $('.gender_selection_female').css({
 //         'border': 'none',
 //         'border-radius': '6px',
@@ -89,9 +85,6 @@
 // $('.gender_selection_female').click(function() {
 //     selected_gender = "Female";
 
-//     $('.gender_selection_male').attr('name' , 'not-selected') 
-//     $('.gender_selection_other').attr('name' , 'not-selected') 
-//     $('.gender_selection_female').attr('name' , 'selected')
 
 //     $('.gender_selection_male').css({
 //         'border': 'none',
@@ -146,10 +139,7 @@
 // $('.gender_selection_other').click(function() {
 //     selected_gender = "Other";
 
-//     $('.gender_selection_male').attr('name' , 'not-selected') 
-//     $('.gender_selection_female').attr('name' , 'not-selected')
-//     $('.gender_selection_other').attr('name' , 'selected')
-
+    
 //     $('.gender_selection_male').css({
 //         'border': 'none',
 //         'border-radius': '6px',
@@ -198,39 +188,35 @@
 // //           }
 // //         });
 // });
-// console.log(selected_gender);
-// // Selecting date of birth
-// // var day;
-// // var month;
-// // var year;
-// // $('#dob-day').click(function(){
-// //     day = $('#dob-day option:selected').text();
+
+// Selecting date of birth
+// var day;
+// var month;
+// var year;
+// $('#dob-day').click(function(){
+//     day = $('#dob-day option:selected').text();
     
-// // });
-// // $('#dob-month').click(function(){
-// //     month = $('#dob-month option:selected').text();
-// //     console.log(month);
+// });
+// $('#dob-month').click(function(){
+//     month = $('#dob-month option:selected').text();
+//     console.log(month);
     
-// // });
-// // $('#dob-year').click(function(){
-// //     year = $('#dob-year option:selected').text();
-// //     });
-// // $.ajax({
-// //     url:"create_profile_1", //the page containing python script
-// //     type: "post", //request type,
-// //     dataType: 'json',
-// //     data: {date_reached_or_not: "success", day_selected: day , month_selected: month, year_selected: year },
-// //     success:function(result){
-// //     console.log(result.abc);
-// //             }
-// //         });
-// // $('.next_button').click(function(){
+// });
+// $('#dob-year').click(function(){
+//     year = $('#dob-year option:selected').text();
+//     });
+// $.ajax({
+//     url:"create_profile_1", //the page containing python script
+//     type: "post", //request type,
+//     dataType: 'json',
+//     data: {date_reached_or_not: "success", day_selected: day , month_selected: month, year_selected: year },
+//     success:function(result){
+//     console.log(result.abc);
+//             }
+//         });
+// $('.next_button').click(function(){
     
-// // });
+// });
         
     
-<<<<<<< Updated upstream
 })(jQuery);
-=======
-// })(jQuery);
->>>>>>> Stashed changes

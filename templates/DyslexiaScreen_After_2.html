@@ -11,15 +11,15 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-  <!-- Bootstrap CSS File -->7
-  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="../static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
   <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  
   <!-- Main Stylesheet File -->
   <link href="../static/css/DyslexiaScreen_After_2styles.css" rel="stylesheet">
+  
   <!--JavaScript File-->
   
   <!-- =======================================================
@@ -58,26 +58,29 @@
         <div class = "row">
               <div class = "col-lg-5 left_sided_column">
                   
-                <h2 style = "color: #2B7A78; font-weight: inherit; font-size: 42px;">Verify Email</h2>
+                <h2 style = "color: #2B7A78;font-weight: 600;font-size: 40px;">Verify Email</h2>
                 <div class = "clearfix"></div>
                 <div class = "clearfix"></div>
                 <div class = "light_grey_line col-lg-12"></div>
                 <div class = "email_sending_text">
-                    <p>We have sent an email to anumharoon94@gmail.com</p>
+                    <p>We have sent an email to <b>{{data.email}}</b></p>
                     <p>Just click on the link in the email to complete your registration</p>
                     <p class = "cant_see_link">Can't see the link?</p>
-                    <form action="{{ url_for('register_2') }}" method="POST" >
-                    <button type="submit" class = "resend_button">Resend email</button>
-                  </form>
+                    <form action="{{ url_for('register_using_email') }}" id = "form1" method= POST>
+                      <button class = "resend_button">Resend Link</button>
+                    </form>
+                    
                     
                 </div>
                 <div class = "clearfix"></div>
                 <div class = "clearfix"></div>
+                <i class="fa fa-arrow-left arrow_button" aria-hidden="true"></i>
+                
               </div>
               
               <div class = "col-lg-6">
                 
-                <p style = "color: #3AAFA9">Step 2/3</p>
+                <p style = "color: #3AAFA9; margin-top: 10px;">Step 2/3</p>
                 <div id="myProgress">
                     
                     <div id="myBar"></div>
@@ -86,16 +89,15 @@
               </div>
           </div>
           <div class = "clearfix"></div>
-          <button class = "back_button"><i class="fas fa-arrow-left"></i></button>
           <div class = "clearfix"></div>
           <div class = "clearfix"></div>
           <div class = "clearfix"></div>
         </div>
   
-      <script src="../static/lib/jquery/jquery.min.js"></script>
+        <script src="../static/lib/jquery/jquery.min.js"></script>
       <script src="../static/lib/jquery/jquery-migrate.min.js"></script>
       <script src="../static/lib/mobile-nav/mobile-nav.js"></script>
       <script src="../static/lib/wow/wow.min.js"></script>
-      <script src="../static/js/DyslexiaScreen_After_2_jquery.js"></script>
+      <script src="../static/js/DyslexiaScreen_After_1_jquery.js"></script>
 </body>
 </html>
