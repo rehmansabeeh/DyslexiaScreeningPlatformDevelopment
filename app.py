@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, session, redirect
+from flask import Flask, render_template, url_for, request, session, redirect, make_response, jsonify
 from flask_pymongo import PyMongo
 import bcrypt
 import json
@@ -15,11 +15,13 @@ email_on_which_link_is_to_be_sent = []
 phone_no_on_which_link_is_to_be_sent = []
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        print('hello')
     if 'username' in session:
         print("successful")
-    return render_template("DyslexiaScreen3.html")
+    return redirect(url_for('create_profile_3'))
 
 
 @app.route('/login', methods=['POST'])
@@ -234,15 +236,13 @@ def create_profile_3():
     print("method12 is : ", request.method)
 
     if request.method == 'POST':
-        print("first_language_Urdu: ", request.json['first_language_Urdu'])
-        print("bilingual_Urdu: ", request.json['bilingual_Urdu'])
-        print("reading_writing_in_Urdu: ",
-              request.json['reading_writing_in_Urdu'])
-
-        return redirect(url_for("q1_quiz"))
+        data = request.get_json(force=True)
+        print(data)
+        res = make_response(jsonify({'message': "chl gaya"}))
+        return redirect(url_for('q1_quiz'))
 
     else:
-        return render_template('DyslexiaScreen2.html')
+        return render_template('DyslexiaScreen3.html')
 
 
 if (__name__ == '__main__'):
