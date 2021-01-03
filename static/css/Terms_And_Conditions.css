@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+    height: 100%;
+    background-color: #DBF6F4;
+	
+}
+.main {
+	content: '';
+	width: 100%;
+	height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.main p{
+    color:gray;
+    font-size: 300%;
+    margin: auto;
+    width: 80%;
+    margin-top: 2%;
+    
+}
+
+
+.main button {
+	background-color: #3AAFA9;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	padding: 1% 2%;
+	text-align: center;
+	text-decoration: none;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 1%;
+
+}
+.conditions {
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    height: 70%;
+    margin-top: 2%;
+    text-align: left;
+    overflow: scroll;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    border-color:gray;
+    border-width: 1px;
+    border-style: solid;
+    padding-bottom: 2%;
+}
+
+.conditions p{
+    color:gray;
+    font-size: 100%;
+    align-content: left;
+    margin-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 0;
+    margin-right: 3%;
+    
+}
+
+/* width */
+.conditions::-webkit-scrollbar {
+    width: 15px;
+    
+  }
+  
+  /* Track */
+.conditions::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+
+  }
+   
+  /* Handle */
+.conditions::-webkit-scrollbar-thumb {
+    background: #3AAFA9; 
+    border-radius: 10px;
+    width: 12px;
+  }
