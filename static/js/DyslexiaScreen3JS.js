@@ -18,6 +18,9 @@ function move() {
 }
 
 
+
+
+
 (function ($) {
     "use strict";
     new WOW().init
@@ -490,22 +493,44 @@ read_write_occasionally++;
 
 });
 
-$.when($(".next_button").click(function() {
 
-$.ajax({
-    
-    url:'/create_profile_3', //the page containing python script
-    type: "POST", //request type,
-    dataType: 'text',
-    data: JSON.stringify({'data_reached_or_not': "success" , 'first_language_Urdu': first_language , 'bilingual_Urdu': bilingual , 'reading_writing_in_Urdu': reading_writing_in_Urdu  }),
-    contentType: "application/json",
-    success: function(date_reached_or_not){  
-                    console.log(date_reached_or_not) 
-                  }  
-         
-        })
-})).then( )
+
+$('.next_button').click(function() {
+
+ 
+  
+  fetch(`${window.origin}/create_profile_3`,{
+    method : 'POST',
+    credentials : "include",
+    body : JSON.stringify({
+      first_language_Urdu : first_language,
+      bilingual_Urdu : bilingual,
+      reading_writing_in_Urdu : reading_writing_in_Urdu
+    }),
+    cache :'no-cache'
+  }).then(function(response){
+    console.log("OKAY2")
+    if(response.status == 200)
+    { console.log("OKAY!")
+      window.location.href = `${window.origin}/q1_quiz`
+    }
+  }
+
+  )
+
+
+})
+
+
 })(jQuery);
+
+
+
+
+
+
+
+
 
 //     $('.gender_selection_female').css({
 //         'border': 'none',
