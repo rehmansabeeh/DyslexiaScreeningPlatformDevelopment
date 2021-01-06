@@ -33,6 +33,7 @@ body {
 	height: 90%;
 	position: relative;
 	overflow: hidden;
+	font-family: 'Nunito';
 	
 }
 .sub-bottom p {
@@ -79,6 +80,7 @@ body {
 	border-radius: 3px;
 	position: relative;
 	cursor: pointer;
+	font-family: 'Nunito';
 }
 .right-button p {
 	margin: 0;
@@ -110,6 +112,7 @@ body {
 	margin-left: 8%;
 	margin-top: 10%;
 	position: relative;
+	font-family: 'Nunito';
 	
 }
 .bottom-text {
@@ -165,6 +168,7 @@ body {
 	height: 10%;
 	text-align: center;
 	position: relative;
+	font-family: 'Nunito';
 }
 .centered-button button {
 	background-color: #3AAFA9;

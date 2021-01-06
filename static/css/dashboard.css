@@ -33,6 +33,8 @@ body {
   font-size: 16px;
   width: 100%;
   height: 10%;
+  font-family: 'Nunito';
+
 }
 
 .left button:hover {
@@ -47,6 +49,8 @@ body {
   font-size: 16px;
   width: 100%;
   height: 7%;
+  font-family: 'Nunito';
+
 }
 .right {
 
@@ -89,6 +93,8 @@ body {
   position: relative;
   margin-top: 2%;
   margin-bottom: 2%;
+  font-family: 'Nunito';
+
 }
 .heading button {
   font-size: 100%;
@@ -106,14 +112,18 @@ body {
   padding-top: 1.5%;
   padding-bottom: 1.5%;
   margin-left: 20%;
+  font-family: 'Nunito';
+
 }
 
 .text {
   font-size: 120%;
-word-wrap: break-word;
+  word-wrap: break-word;
   position: relative;
   margin-top: 2%;
   margin-bottom:1%;
+  font-family: 'Nunito';
+
 
 }
 

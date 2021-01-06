@@ -54,6 +54,7 @@ body {
 	margin-top: 3%;
 	float: right;
 	margin-right: 10%;
+	font-family: 'Nunito';
 }
 .content {
 	height: 50%;
@@ -93,6 +94,7 @@ body {
 	border-radius: 3px;
 	position: relative;
 	cursor: pointer;
+	font-family: 'Nunito';
 }
 .right-button p {
 	margin: 0;

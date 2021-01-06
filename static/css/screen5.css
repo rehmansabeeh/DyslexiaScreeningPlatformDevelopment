@@ -52,12 +52,12 @@ body {
 	padding: 1% 2%;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
     font-size: 16px;
     padding: 2% 8%;
 	margin-top: 3%;
 	float: right;
 	margin-right: 10%;
+	font-family: 'Nunito';
 }
 .content {
 	height: 50%;
@@ -97,6 +97,7 @@ body {
 	border-radius: 3px;
 	position: relative;
 	cursor: pointer;
+	font-family: 'Nunito';
 }
 .right-button p {
 	margin: 0;
