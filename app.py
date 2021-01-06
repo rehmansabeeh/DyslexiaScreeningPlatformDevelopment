@@ -13,6 +13,7 @@ mongo = PyMongo(app)
 
 email_on_which_link_is_to_be_sent = []
 phone_no_on_which_link_is_to_be_sent = []
+score = 0
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -21,7 +22,7 @@ def index():
         print('hello')
     if 'username' in session:
         print("successful")
-    return redirect(url_for('create_profile_3'))
+    return redirect(url_for("create_profile_3"))
 
 
 @app.route('/login', methods=['POST'])
@@ -56,26 +57,26 @@ def temp():
         return render_template('register.html')
 
 
-@app.route('/register1', methods=['POST', 'GET'])
+@app.route('/register_1', methods=['POST', 'GET'])
 def register_1():
     if request.method == 'POST':
-        email = request.form.get('lemail')
-        print(email)
-        email_on_which_link_is_to_be_sent.append(email)
-        #temp = {'email' : email_on_which_link_is_to_be_sent}
 
-        phone_no = request.form.get('lphone')
+        data = request.get_json(force=True)
+        print(data)
+        print(data['entered_email_user'])
+        print(data['phone_number_user'])
+        res = ""
+        if(data['entered_email_user'] == '' and data['phone_number_user'] != ''):
 
-        phone_no_on_which_link_is_to_be_sent.append(phone_no)
-        print("Phone", phone_no_on_which_link_is_to_be_sent[0])
-        print("Email", email_on_which_link_is_to_be_sent[0])
-        if(email_on_which_link_is_to_be_sent[0] != None):
+            res = make_response(
+                jsonify({'message': "successful", 'trajectory': "phone_no"}))
 
-            return redirect(url_for('register_using_email'))
+        elif (data['entered_email_user'] != '' and data['phone_number_user'] == ''):
 
-        elif(phone_no_on_which_link_is_to_be_sent[0] != None):
+            res = make_response(
+                jsonify({'message': "successful", 'trajectory': "email"}))
 
-            return redirect(url_for('register_using_phone'))
+        return res
 
     else:
         return render_template('DyslexiaScreen_After_1.html')
@@ -84,7 +85,8 @@ def register_1():
 @app.route('/register_using_email', methods=['POST', 'GET'])
 def register_using_email():
     # print("register 2", request.method)
-    temp = {"email": email_on_which_link_is_to_be_sent[0]}
+    # temp = {"email": email_on_which_link_is_to_be_sent[0]}
+    print(request.method)
     if request.method == "POST":
         print("after email clicking")
         # change the email in html
@@ -99,9 +101,9 @@ def register_using_email():
 @app.route('/register_using_phone', methods=['POST', 'GET'])
 def register_using_phone():
     print("register 2", request.method)
-    temp = {"phone_no": phone_no_on_which_link_is_to_be_sent[0]}
+    # temp = {"phone_no": phone_no_on_which_link_is_to_be_sent[0]}
     if request.method == "POST":
-        print("after phone clicking")
+        # print("after phone clicking")
         return redirect(url_for('register_3'))
     else:
         return render_template("DyslexiaScreen_After_3.html", data=temp)
@@ -110,6 +112,7 @@ def register_using_phone():
 @app.route('/register3', methods=['POST', 'GET'])
 def register_3():
     print("register page 3", request.method)
+
     if request.method == "POST":
         print("after clicking")
         return redirect(url_for('register_4'))
@@ -138,94 +141,44 @@ def create_profile_1():
     print("method is : ", request.method)
     # users = mongo.db.users
     # lusers = users.find_one({'name': request.form['username']})
+
     if request.method == 'POST':
-        print("HEREERHEHR")
-        month = request.form['dob-month']
-        name = request.form['lname']
-        year = request.form['dob-year']
-        day = request.form['dob-day']
-        # gender = request.form['selected']
-
-        print("HERERE21")
-        print("HERERE22")
-        print("HERERE23")
-        selected_gender = request.form['selected']
-        print(selected_gender)
-        print(month)
-        print(year)
-        # request.form['gender_selection_female']
-        # request.form['gender_selection_other']
-        return redirect(url_for('create_profile_2'))
-
+        data = request.get_json(force=True)
+        print(data)
+        res = make_response(jsonify({'message': "successful"}))
+        return res
     else:
         return render_template('DyslexiaScreen1.html')
-
-    # if request.form.get('gender_reached_or_not') == 'success':
-    #     gender = request.form.get('gender')
-    #     # should be stored in DB
-    #     return json.dumps({'abc': 'successfuly noted gender'})
-    # else:
-    #     return json.dumps({'abc': 'couldn''t store gender'})
-
-    # if request.form.get('date_reached_or_not') == 'success':
-    #     day = request.form.get('day_selected')
-    #     month = request.form.get('month_selected')
-    #     year = request.form.get('year_selected')
-    #     # should be stored in DB
-    #     return json.dumps({'abc': 'successfuly noted DOB'})
-    # else:
-    #     return json.dumps({'abc': 'couldn''t store DOB'})
-
-    # if request.form.get('gender_reached_or_not') == 'success':
-    #     gender = request.form.get('gender')
-    #     # should be stored in DB
-    #     return json.dumps({'abc': 'successfuly noted gender'})
-    # else:
-    #     return json.dumps({'abc': 'couldn''t store gender'})
 
 
 @app.route('/q1_quiz', methods=['POST', 'GET'])
 def q1_quiz():
+    questions = mongo.db.Questions
+    data = questions.find({'q_level': '3'})
+    # print(data)
+    for i in data:
+        print(i['actual_word'])
     print("Q1: ", request.method)
-    return render_template("screen2.html")
+    if request.method == 'POST':
+        # answers = request.get_json(force=True)
+        # if answers['selected'] == answers['correct']:
+        #     score += 1
+        res = make_response(jsonify({'message': "successful"}))
+        return res
+    else:
+        return render_template("screen2.html", data=data)
 
 
 @app.route('/create_profile_2', methods=['POST', 'GET'])
 def create_profile_2():
 
-    print("method1 is : ", request.method)
+    print("method2 is : ", request.method)
 
     if request.method == 'POST':
-        # selected_educational_level = request.form['grade_sent']
-        # print( "Selected Grade: ", selected_educational_level)
-        # print("Selected Educational Level: ", request.form['selected_education_level_sent'])
-        # print("HERERE22")
-        # print("hello2")
-        selected_educational_grade = request.json['grade_sent']
-        # # print("hello3")
-        print("Selected Grade: ", selected_educational_grade)
-        print("Selected Educational Level: ",
-              request.json['selected_education_level_sent'])
-        print("HERERE22")
-        print("hello2")
-        # selected_educational_grade =
-
-        # return redirect(url_for('q1_quiz'))
-        # # print(request.form['test_div'])
-        # print("Grade: " , grade)
-
-        # THIS REDIRECT STATEMENT WON'T COME HERE
-        # \return render_template('q1.html',data=Todos.query.all())
-
-        return"asdf"
-
-        # sreturn redirect(url_for('q1_quiz'))
-        # # print(request.form['test_div'])
-        # print("Grade: " , grade)
-
-        # THIS REDIRECT STATEMENT WON'T COME HERE
-        # \return render_template('q1.html',data=Todos.query.all())
-
+        data = request.get_json(force=True)
+        print(data)
+        res = make_response(jsonify({'message': "successful"}))
+        return res
     else:
         return render_template('DyslexiaScreen2.html')
 
@@ -233,13 +186,24 @@ def create_profile_2():
 @app.route('/create_profile_3', methods=['POST', 'GET'])
 def create_profile_3():
 
-    print("method12 is : ", request.method)
+    users = mongo.db.name_age_gender
+    data = users.find_one({'name': 'sabeeh'})
+    print(data)
+    users.replace_one(
+        {"name": "sabeeh"},
+        {"name": "sabeeh",
+         "date": data['date'],
+         "update": 'true'})
 
+    data = users.find_one({'name': 'abc'})
+    print(data)
+    print("method12 is : ", request.method)
     if request.method == 'POST':
         data = request.get_json(force=True)
         print(data)
-        res = make_response(jsonify({'message': "chl gaya"}))
-        return redirect(url_for('q1_quiz'))
+        res = make_response(jsonify({'message': "chal gaya"}))
+        # return redirect(url_for('q1_quiz'))
+        return res
 
     else:
         return render_template('DyslexiaScreen3.html')

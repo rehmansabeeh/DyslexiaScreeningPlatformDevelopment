@@ -508,7 +508,17 @@ $('.next_button').click(function() {
       reading_writing_in_Urdu : reading_writing_in_Urdu
     }),
     cache :'no-cache'
-  })
+  }).then(function(response){
+    console.log("OKAY2")
+    if(response.status == 200)
+    { console.log("OKAY!")
+      window.location.href = `${window.origin}/q1_quiz`
+    }
+  }
+
+  )
+
+
 })
 
 
