@@ -50,7 +50,6 @@ body {
 	padding: 1% 2%;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
     font-size: 16px;
     padding: 2% 8%;
 	margin-top: 3%;
@@ -135,7 +134,7 @@ body {
 
 }
 .test_taker_gender figure{
-	background-color: 
+	background-color: green;
 }
 .test_taker_gender figure figcaption{
 	margin-top: 13px;
