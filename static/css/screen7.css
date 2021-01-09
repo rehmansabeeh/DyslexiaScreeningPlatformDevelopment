@@ -130,7 +130,7 @@ body {
 }
 
 
-.box {
+.box-first {
 	background-color: white;
 	display: inline-block;
 	height: 90%;
@@ -142,7 +142,7 @@ body {
 	align-items: center;
 	position: relative;
 }
-.box p {
+.box-first p {
 	font-size: 200%;
 	text-align: center;
 	word-wrap: break-word;
@@ -153,12 +153,68 @@ body {
 	transform: translate(-50%,-50%);
 	
 }
-.box:hover {
+.box-first:hover {
 	border: 2px solid #3AAFA9;
 	color: white;
 	cursor: pointer;
 }
 
+.box-second {
+	background-color: white;
+	display: inline-block;
+	height: 90%;
+	width: 17%;
+	margin-top: 0%;
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-bottom: 5%;
+	align-items: center;
+	position: relative;
+}
+.box-second p {
+	font-size: 200%;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.box-second:hover {
+	border: 2px solid #3AAFA9;
+	color: white;
+	cursor: pointer;
+}
+.box-third {
+	background-color: white;
+	display: inline-block;
+	height: 90%;
+	width: 17%;
+	margin-top: 0%;
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-bottom: 5%;
+	align-items: center;
+	position: relative;
+}
+.box-third p {
+	font-size: 200%;
+	text-align: center;
+	word-wrap: break-word;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.box-third:hover {
+	border: 2px solid #3AAFA9;
+	color: white;
+	cursor: pointer;
+}
 .button-start {
 	margin-left: auto;
 	margin-right: auto;

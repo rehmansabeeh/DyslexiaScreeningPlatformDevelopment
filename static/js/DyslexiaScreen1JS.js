@@ -24,199 +24,246 @@ var selected_gender;
     "use strict";
     
     // First we store the name user entered
-    var entered_name = $("#lname").value;
-//     $('.gender_selection_male').click(function() {
-//     selected_gender = "Male";
+    var entered_name; 
+    var entered_month;
+    var entered_year; 
+    var entered_day;
+  
+$('#lname').change(function(){
+  entered_name = $('#lname').val();
+  
+});
+$('#dob-month').change(function(){
+  entered_month = $('#dob-month').val();
+  
+});
+$('#dob-year').change(function(){
+  entered_year = $('#dob-year').val();
+});
+$('#dob-day').change(function(){
+  entered_day = $('#dob-day').val();
+});
+
+$('.name_form_male').click(function() {
+    selected_gender = "Male";
     
-    console.log(selected_gender);    
-//     $('.gender_selection_female').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//     $('.gender_selection_other').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//         if(no_of_clicks_female%2 != 0){
-//             no_of_clicks_female++;
-//         }
-//         if(no_of_clicks_other%2 != 0){
-//             no_of_clicks_other++;
-//         }
+    $('.name_form_female').css({
+        'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+    $('.name_form_other').css({
+        'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+        if(no_of_clicks_female%2 != 0){
+            no_of_clicks_female++;
+        }
+        if(no_of_clicks_other%2 != 0){
+            no_of_clicks_other++;
+        }
         
         
 
-//         if(no_of_clicks_male%2 == 0){
+        if(no_of_clicks_male%2 == 0){
 
-//     $('.gender_selection_male').css({
-//     'border': 'none',
-//     'border-radius': '6px',
-//     'background-color': '#3AAFA9',
-//     'color': '#fff'
-//     });
-// }
-// else{
-//     $('.gender_selection_male').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-// }
-// no_of_clicks_male++;
-// // $.ajax({
-// //     url:"create_profile", //the page containing python script
-// //     type: "post", //request type,
-// //     dataType: 'json',
-// //     data: { gender_reached_or_not: "success" , gender: "male"},
-// //     success:function(result){
-// //     console.log(result.abc);
-// //           }
-// //         });
-
-
-    
-//     });
-
-// $('.gender_selection_female').click(function() {
-//     selected_gender = "Female";
-
-
-//     $('.gender_selection_male').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//     $('.gender_selection_other').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-        
-//         if(no_of_clicks_male%2 != 0){
-//             no_of_clicks_male++;
-//         }
-//         if(no_of_clicks_other%2 != 0){
-//             no_of_clicks_other++;
-//         }
-        
-
-//         if(no_of_clicks_female%2 == 0){
-
-//     $('.gender_selection_female').css({
-//     'border': 'none',
-//     'border-radius': '6px',
-//     'background-color': '#3AAFA9',
-//     'color': '#fff'
-//     });
-// }
-// else{
-//     $('.gender_selection_female').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-// }
-// no_of_clicks_female++;
-// // $.ajax({
-// //     url:"create_profile", //the page containing python script
-// //     type: "post", //request type,
-// //     dataType: 'json',
-// //     data: {gender_reached_or_not: "success" , gender: "female"},
-// //     success:function(result){
-// //     console.log(result.abc);
-// //           }
-// //         });
-// });
-
-// $('.gender_selection_other').click(function() {
-//     selected_gender = "Other";
-
-    
-//     $('.gender_selection_male').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//     $('.gender_selection_female').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-//         if(no_of_clicks_male%2 != 0){
-//             no_of_clicks_male++;
-//         }
-//         if(no_of_clicks_female%2 != 0){
-//             no_of_clicks_female++;
-//         }
-        
-    
-//         if(no_of_clicks_other%2 == 0){
-
-//     $('.gender_selection_other').css({
-//     'border': 'none',
-//     'border-radius': '6px',
-//     'background-color': '#3AAFA9',
-//     'color': '#fff'
-//     });
-// }
-// else{
-//     $('.gender_selection_other').css({
-//         'border': 'none',
-//         'border-radius': '6px',
-//         'background-color': '#ddd',
-//         'color': '#C6C1C3'
-//         });
-// }
-// no_of_clicks_other++;
-// // $.ajax({
-// //     url:"create_profile", //the page containing python script
-// //     type: "post", //request type,
-// //     dataType: 'json',
-// //     data: {gender_reached_or_not: "success" , gender: "other"},
-// //     success:function(result){
-// //     console.log(result.abc);
-// //           }
-// //         });
-// });
-
-// Selecting date of birth
-// var day;
-// var month;
-// var year;
-// $('#dob-day').click(function(){
-//     day = $('#dob-day option:selected').text();
-    
-// });
-// $('#dob-month').click(function(){
-//     month = $('#dob-month option:selected').text();
-//     console.log(month);
-    
-// });
-// $('#dob-year').click(function(){
-//     year = $('#dob-year option:selected').text();
-//     });
+    $('.name_form_male').css({
+    'border': 'none',
+    'border-radius': '6px',
+    'background-color': '#3AAFA9',
+    'color': '#fff'
+    });
+}
+else{
+    $('.name_form_male').css({
+        'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+}
+no_of_clicks_male++;
 // $.ajax({
-//     url:"create_profile_1", //the page containing python script
+//     url:"create_profile", //the page containing python script
 //     type: "post", //request type,
 //     dataType: 'json',
-//     data: {date_reached_or_not: "success", day_selected: day , month_selected: month, year_selected: year },
+//     data: { gender_reached_or_not: "success" , gender: "male"},
 //     success:function(result){
 //     console.log(result.abc);
-//             }
+//           }
 //         });
-// $('.next_button').click(function(){
+
+
     
-// });
+    });
+
+$('.name_form_female').click(function() {
+    selected_gender = "Female";
+
+
+    $('.name_form_male').css({
+        'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+    $('.name_form_other').css({
+        'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+        
+        if(no_of_clicks_male%2 != 0){
+            no_of_clicks_male++;
+        }
+        if(no_of_clicks_other%2 != 0){
+            no_of_clicks_other++;
+        }
+        
+
+        if(no_of_clicks_female%2 == 0){
+
+    $('.name_form_female').css({
+    'border': 'none',
+    'border-radius': '6px',
+    'background-color': '#3AAFA9',
+    'color': '#fff'
+    });
+}
+else{
+    $('.name_form_female').css({
+       'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+}
+no_of_clicks_female++;
+// $.ajax({
+//     url:"create_profile", //the page containing python script
+//     type: "post", //request type,
+//     dataType: 'json',
+//     data: {gender_reached_or_not: "success" , gender: "female"},
+//     success:function(result){
+//     console.log(result.abc);
+//           }
+//         });
+});
+
+$('.name_form_other').click(function() {
+    selected_gender = "Other";
+
+    
+    $('.name_form_male').css({
+        'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+    $('.name_form_female').css({
+        'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+        if(no_of_clicks_male%2 != 0){
+            no_of_clicks_male++;
+        }
+        if(no_of_clicks_female%2 != 0){
+            no_of_clicks_female++;
+        }
+        
+    
+        if(no_of_clicks_other%2 == 0){
+
+    $('.name_form_other').css({
+    'border': 'none',
+    'border-radius': '6px',
+    'background-color': '#3AAFA9',
+    'color': '#fff'
+    });
+}
+else{
+    $('.name_form_other').css({
+        'border': '1px solid #B4ADB0',
+        'padding': '10px',
+        'border-radius': '6px',
+        'margin': '7px',
+        'font-weight': 'initial',
+        'background-color': '#fff',
+        'color': '#B4ADB0',
+        'transition': 'ease all 0.3s'
+        });
+}
+no_of_clicks_other++;
+});
+
+$('.next_button').click(function() {
+
+ 
+  
+fetch(`${window.origin}/create_profile_1`,{
+    method : 'POST',
+    credentials : "include",
+    body : JSON.stringify({
+      entered_name_user : entered_name,
+      entered_month_user : entered_month,
+      entered_year_user : entered_year,
+      entered_day_user : entered_day,
+      selected_gender_user : selected_gender 
+    }),
+    cache :'no-store'
+  }).then(function(response){
+    console.log("OKAY2")
+    if(response.status == 200)
+    
+    { 
+      console.log("OKAY!")
+      response.json().then(function(data_received){
+        window.location.href = `${window.origin}/create_profile_2` + '?id=' + data_received['id_to_be_passed'];
+      })
+    }
+  }
+
+  )
+})
+
         
     
 })(jQuery);

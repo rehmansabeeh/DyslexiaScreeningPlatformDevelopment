@@ -17,10 +17,6 @@ function move() {
   }
 }
 
-
-
-
-
 (function ($) {
     "use strict";
     new WOW().init
@@ -493,6 +489,9 @@ read_write_occasionally++;
 
 });
 
+var urlParams = new URLSearchParams(window.location.search);
+var myParam = urlParams.get('id');
+console.log(myParam)
 
 
 $('.next_button').click(function() {
@@ -505,20 +504,20 @@ $('.next_button').click(function() {
     body : JSON.stringify({
       first_language_Urdu : first_language,
       bilingual_Urdu : bilingual,
-      reading_writing_in_Urdu : reading_writing_in_Urdu
+      reading_writing_in_Urdu : reading_writing_in_Urdu,
+      query_variable_in_url: myParam
     }),
-    cache :'no-cache'
+    cache : 'no-store'
   }).then(function(response){
     console.log("OKAY2")
     if(response.status == 200)
     { console.log("OKAY!")
-      window.location.href = `${window.origin}/q1_quiz`
+      response.json().then(function(data_received){
+        window.location.href = `${window.origin}/test_start_1` + '?id=' + data_received['id_to_be_passed'];
+      })
     }
   }
-
   )
-
-
 })
 
 

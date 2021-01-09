@@ -1,8 +1,7 @@
 body {
   background: #dbf6f4;
   color: #444;
-  	font-family: 'Nunito';
-
+  font-family: "Open Sans", sans-serif;
 }
 
 p {
@@ -16,8 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Nunito';
-
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -353,9 +351,59 @@ h6 {
   background-color: #3aafa9;
   color: #fff;
 }
-.name_form {
-  /* border:1px solid black; */
+.name_form_male{
+  border: 1px solid #B4ADB0;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 7px;
+  font-weight: initial;
+  background-color: #fff;
+  color: #B4ADB0;
+  transition: ease all 0.3s;
 }
+.name_form_male:hover{
+  border: none;
+  border-radius: 6px;
+  background-color: #3AAFA9;
+  color: #fff;
+}
+.name_form_female{
+  border: 1px solid #B4ADB0;
+  background-color: #fff;
+  color: #B4ADB0;
+  margin: 7px;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: initial;
+  transition: ease all 0.3s;
+}
+.name_form_female:hover{
+  border: none;
+  border-radius: 6px;
+  background-color: #3AAFA9;
+  color: #fff;
+}
+.name_form_other{
+  border: 1px solid #B4ADB0;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 7px;
+  font-weight: initial;
+  background-color: #fff;
+  color: #B4ADB0;
+  transition: ease all 0.3s;
+}
+.name_form_other:hover{
+  border: none;
+  border-radius: 6px;
+  background-color: #3AAFA9;
+  color: #fff;
+}
+
+.margin-adjustment{
+  margin-left: -7px;
+}
+
 span{
   float: left;
 }

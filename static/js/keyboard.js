@@ -1,3 +1,4 @@
+var entered_value_keyboard;
 const Keyboard = {
     elements: {
         main: null,
@@ -170,7 +171,10 @@ const Keyboard = {
     },
 
     close() {
-        this.properties.value = "";
+        // this.properties.value = "";
+        //this.properties.value = "SABEEH";
+        entered_value_keyboard = this.properties.value; 
+        console.log(this.properties.value)
         this.eventHandlers.oninput = oninput;
         this.eventHandlers.onclose = onclose;
         this.elements.main.classList.add("keyboard--hidden");

@@ -76,32 +76,78 @@ var country_code
     });
     console.log("Insid JS")
     
-    $(".next_button").click(function(){
-      console.log($("#phone").val())
-      console.log($("#lemail").val())
-      if($("#phone").val() == "" && $("#lemail").val() == "")
-      {   
-      }
-      else{
-        console.log("HARARE")
-          if($("#phone").val() != false)
-        { console.log("Email False")
-          $("#lemail").prop('required',false);
-        }
+    // $(".next_button").click(function(){
+    //   console.log($("#phone").val())
+    //   console.log($("#lemail").val())
+    //   if($("#phone").val() == "" && $("#lemail").val() == "")
+    //   {   
+    //   }
+    //   else{
+    //     console.log("HARARE")
+    //       if($("#phone").val() != false)
+    //     { console.log("Email False")
+    //       $("#lemail").prop('required',false);
+    //     }
         
-        else if ($("#lemail").val() != false)
-        { console.log("Phone False")
-          $("#phone").prop('required',false);
-        }
-      }
-    })
+    //     else if ($("#lemail").val() != false)
+    //     { console.log("Phone False")
+    //       $("#phone").prop('required',false);
+    //     }
+    //   }
+    // })
     
-    
-    
-    
-    var entered_email = $("#lemail").value;
-    country_code = $('#countryCode_drop_down:selected').text();
-    var phone_number = $("#phone").value; 
+  
+    var entered_email = "";
+    var country_code = "";
+    var phone_number = "";
+
+    $("#lemail").change(function(){
+      entered_email = $("#lemail").val();
+    });
+    $('#countryCode_drop_down').change(function(){
+      country_code = $('#countryCode_drop_down:selected').text();
+    });
+
+    $('#phone').change(function(){
+      phone_number = $("#phone").val();
+    });
+
+
+    $('.next_button').click(function() {  
+      fetch(`${window.origin}/register_1`,{
+        method : 'POST',
+        credentials : "include",
+        body : JSON.stringify({
+          entered_email_user : entered_email,
+          country_code_user : country_code,
+          phone_number_user : phone_number
+        }),
+        cache :'no-cache'
+      }).then(function(response){
+        if(response.status == 200)
+        { console.log("OKAY!")
+          response.json().then( function(data){
+            if(data['trajectory'] == "email"){
+              window.location.href = `${window.origin}/register_using_email`
+            }
+            
+            else if(data['trajectory'] == "phone_no")
+              { window.location.href = `${window.origin}/register_using_phone` }
+          })
+        
+        
+      
+      // window.location.href = `${window.origin}/q1_quiz`
+    }
+  }
+
+  )
+
+
+})
+
+
+
 
     
 })(jQuery);

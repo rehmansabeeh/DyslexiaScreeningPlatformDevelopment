@@ -65,29 +65,27 @@
                 <p>Name</p>
                 <div class = "row closer_top">
                     <div class = "col-lg-12 name_form">
-                         <form action="{{ url_for('create_profile_1') }}" method= POST id = "form1">
-                           <input type="text" required id="lname" name="lname" placeholder="Your name.." style = "width: 100%; padding: 10px; border: 1px solid #B4ADB0;border-radius: 7px;" required>
+                           <input type="text" id="lname" name="lname" placeholder="Your name.." style = "width: 100%; padding: 10px; border: 1px solid #B4ADB0;border-radius: 7px;" required>
                     </div>
                 </div>
                 <div class = "clearfix"></div>
                 <p>Gender</p>
 
-                  <div class = "row closer_top" >
-                  <div class = "col-lg-4 name_form">
-                    <!-- <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label><br> -->
-                    <input type="radio" name="selected" value="Male" required/>
-                    <label for="Male">Male</label><br>
+                  <div class = "row closer_top margin-adjustment">
+                  <div class = "col-lg-3 name_form_male">
+                    Male
                   </div>
 
-                  <div class = "col-lg-4 name_form">
-                    <input  type="radio" name="selected" value="Female" required/>
-                    <label for="Female">Female</label><br>
+                  <div class = "col-lg-3 name_form_female">
+                    Female
+                    <!-- <input  type="radio" name="selected" value="Female" required/>
+                    <label for="Female">Female</label><br> -->
                   </div>
 
-                  <div class = "col-lg-4 name_form">
-                    <input  type="radio" name="selected" value="Other" required/>
-                    <label for="Other">Other</label><br>
+                  <div class = "col-lg-3 name_form_other">
+                    Other
+                    <!-- <input  type="radio" name="selected" value="Other" required/>
+                    <label for="Other">Other</label><br> -->
                   </div>
 
               </div>  
@@ -289,14 +287,13 @@
               </div>
           </div>
           <div class = "clearfix"></div>
-          <button class = "darkgreen next_button" type="submit"  value="Submit" form = "form1" >NEXT</button>
+          <button class = "darkgreen next_button">NEXT</button>
        
           <div class = "clearfix"></div>
           <div class = "clearfix"></div>
           <div class = "clearfix"></div>
         </div>
         
-      </form>
       <script src="../static/lib/jquery/jquery.min.js"></script>
       <script src="../static/lib/jquery/jquery-migrate.min.js"></script>
       <script src="../static/lib/mobile-nav/mobile-nav.js"></script>

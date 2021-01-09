@@ -804,21 +804,35 @@ $('.circle_grade_option_9').click(function() {
         
         no_of_clicks_array[9]++;
 })
-$.when($(".next_button").click(function() {
 
-$.ajax({
-    
-    url:'/create_profile_2', //the page containing python script
-    type: "POST", //request type,
-    dataType: 'text',
-    data: JSON.stringify({'gender_reached_or_not': "success" , 'selected_education_level_sent': selected_education_level , 'grade_sent': selected_grade}),
-    contentType: "application/json",
-    success: function(date_reached_or_not){  
-                    console.log(date_reached_or_not) 
-                  }  
-         
-        })
-})).then( )
+var urlParams = new URLSearchParams(window.location.search);
+var myParam = urlParams.get('id');
+console.log(myParam)
+
+$('.next_button').click(function() {
+
+ 
+  
+  fetch(`${window.origin}/create_profile_2`,{
+    method : 'POST',
+    credentials : "include",
+    body : JSON.stringify({
+      grade_sent : selected_grade,
+      selected_education_level_sent : selected_education_level,
+      query_variable_in_url: myParam
+    }),
+    cache : 'no-store'
+  }).then(function(response){
+    if(response.status == 200)
+    { 
+      response.json().then(function(data_received){
+        window.location.href = `${window.origin}/create_profile_3` + '?id=' + data_received['id_to_be_passed'];
+      })
+    }
+  }
+
+  )
+})
 })(jQuery);
     
     // First we store the name user entered 

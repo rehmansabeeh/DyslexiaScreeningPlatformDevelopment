@@ -2,18 +2,30 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../static/css/screen4.css">
+<link rel="stylesheet" href="../static/css/screen2_ayesha.css">
 </head>
+
 <body>
 <div class="main">
 	<div class="container-left">
 		<div class="icon-question">
-			<img src="../static/images/questionmark1.png" class="questionmarkk"/>
+			<a href = "video_demo.html"><img src="../static/images/questionmark1.png" class="questionmarkk"/></a>
 		</div>
 		<div class= "icon-gallery">
-			<img src="../static/images/test5-logo.png"  width=90% height=90% />
+			<img src="../static/images/test1-logo.png" width=90% height=90%/>
 		</div>
 	</div>
+	<!-- HIDDEN CORRECT OPTIONS -->
+	<div class = "test_div1">{{data[0].actual_word}}</div>
+	<div class = "test_div2">{{data[1].actual_word}}</div>
+	<div class = "test_div3">{{data[2].actual_word}}</div>
+	<div class = "test_div4">{{data[3].actual_word}}</div>
+	<div class = "test_div5">{{data[4].actual_word}}</div>
+	<div class = "test_div6">{{data[5].actual_word}}</div>
+	<div class = "test_div7">{{data[6].actual_word}}</div>
+	<div class = "test_div8">{{data[7].actual_word}}</div>
+	<div class = "test_div9">{{data[8].actual_word}}</div>	
+	
 	<div class="container-right">
 		<div class="sub-top">
 			<div class="content">
@@ -21,18 +33,14 @@
 					
 				</div>
 				<div class="right-button">
-					<p>Exit</p>
+					<button id="myBtn">Exit</button>
 				</div>
 			</div>
 		</div>
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-first" id = "first_set_id_1">
@@ -46,19 +54,14 @@
 					</div>
 					<div class="box-first" id = "first_set_id_4">
 						<p>{{data[0].actual_word}}</p>
-				    </div>
+					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
-
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-second" id = "second_set_id_1">
@@ -74,43 +77,33 @@
 						<p> {{data[1].actual_word}}</p>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
-
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
-					<div class="box-second" id = "second_set_id_1">
+					<div class="box-third" id = "third_set_id_1">
 						<p> {{data[2].option_1}}</p>
 					</div>
-					<div class="box-second" id = "second_set_id_2">
+					<div class="box-third" id = "third_set_id_2">
 						<p>{{data[2].option_2}}</p>
 					</div>
-					<div class="box-second" id = "second_set_id_3">
+					<div class="box-third" id = "third_set_id_3">
 						<p>{{data[2].option_3}}</p>
 					</div>
-					<div class="box-second" id = "second_set_id_4">
-						<p> {{data[2].actual_word}}</p>
+					<div class="box-third" id = "third_set_id_4">
+						<p>{{data[2].actual_word}}</p>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
-
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-fourth" id = "fourth_set_id_1">
@@ -126,17 +119,12 @@
 						<p>{{data[3].actual_word}}</p>
 					</div>
 				</div>
-			</div>
-		</div>
-
+			</div>	
+]		</div>
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-fifth" id = "fifth_set_id_1">
@@ -152,17 +140,12 @@
 						<p>{{data[4].actual_word}}</p>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
-
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-sixth" id = "sixth_set_id_1">
@@ -178,17 +161,12 @@
 						<p>{{data[5].actual_word}}</p>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
-
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-seventh" id = "seventh_set_id_1">
@@ -204,17 +182,12 @@
 						<p>{{data[6].actual_word}}</p>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
-
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-eighth" id = "eighth_set_id_1">
@@ -230,18 +203,12 @@
 						<p>{{data[7].actual_word}}</p>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</div>
-
-
 		<div class="sub-bottom1">
 			<div class="frame1">
 				<div class="sub-left">
-					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
-					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
-					  Your browser does not support the audio element.
-					  </audio>
+					<img src="../static/images/chair.jpg" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-ninth" id = "ninth_set_id_1">
@@ -257,17 +224,17 @@
 						<p>{{data[8].actual_word}}</p>
 					</div>
 				</div>
-			</div>
+			</div>	
 			<button class= "next_button" style="text-decoration: none; color: #fff"> Next Test </button>
 		</div>
+		
 	</div>
-
 </div>
+<script src="../static/js/mcq.js"></script>
 <script src="../static/lib/jquery/jquery.min.js"></script>
 <script src="../static/lib/jquery/jquery-migrate.min.js"></script>
 <script src="../static/lib/mobile-nav/mobile-nav.js"></script>
 <script src="../static/lib/wow/wow.min.js"></script>
-<script src="../static/js/mcq.js"></script>
-<script src="../static/js/screen4JS.js"></script>
+<script src="../static/js/screen2JS.js"></script>
 </body>
 </html>
