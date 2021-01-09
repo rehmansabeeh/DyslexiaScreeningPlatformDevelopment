@@ -18,7 +18,7 @@ body {
 	height: 100%;
 	float: left;
 	background-color: #3AAFA9;
-	position: relative;
+	position: fixed;
 }
 .container-right {
 	width: 88%;
@@ -35,7 +35,18 @@ body {
 	position: relative;
 	
 }
+
 .sub-bottom {
+	width: 100%;
+	height: 55%;
+	position: relative;
+	overflow: hidden;
+	background-image:url('../images/background_image.png') ; 
+	background-position: center; /* Center the image */ 
+	background-size: cover; 
+}
+
+.sub-bottom1 {
 	width: 100%;
 	height: 90%;
 	position: relative;
@@ -43,21 +54,22 @@ body {
 	background-image:url('../images/background_image.png') ; 
 	background-position: center; /* Center the image */ 
 	background-size: cover; 
+	text-align: center;
+	
 }
-.sub-bottom button {
+.sub-bottom1 button {
 	background-color: #3AAFA9;
 	border: none;
 	border-radius: 5px;
 	color: white;
-	padding: 1% 2%;
+	padding: 1.5% 3%;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
-    font-size: 16px;
-    padding: 2% 8%;
+	font-size: 16px;
 	margin-top: 3%;
-	float: right;
-	margin-right: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Nunito';
 }
 .content {
 	height: 50%;
@@ -97,6 +109,7 @@ body {
 	border-radius: 3px;
 	position: relative;
 	cursor: pointer;
+	font-family: 'Nunito';
 }
 .right-button p {
 	margin: 0;
@@ -132,6 +145,14 @@ body {
 	height: 90%;
 }
 .frame {
+	margin: 0;
+	width: 90%;
+	height: 70%;
+	margin-left: 8%;
+	margin-top: 10%;
+	position: relative;
+}
+.frame1 {
 	margin: 0;
 	width: 90%;
 	height: 50%;

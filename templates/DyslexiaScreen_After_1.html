@@ -59,7 +59,7 @@
                 <div class = "row closer_top">
                     <div class = "col-lg-12 name_form">
                         <form action="{{ url_for('register_1') }}" id = "form1" method= POST  >
-                            <input type="text" id="lemail" name="lemail" placeholder="Email" style = "width: 100%; padding: 10px; border-radius: 7px;border-width: thin;" value = "" required>
+                            <input type="email" required id="lemail" name="lemail" placeholder="Email" style = "width: 100%; padding: 10px; border-radius: 7px;border-width: thin;" value = "" required>
                         </form>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
     
   <div class = "phone_number_space">
     <div class = "country_code_space">
-      <select name="countryCode" id="countryCode_drop_down">
+      <select name="countryCode" id="countryCode_drop_down" required>
     <option data-countryCode="PK" value="92" Selected>Pakistan (+92)</option>
     <option data-countryCode="US" value="1">USA (+1)</option>
     <optgroup label="Other countries">
@@ -299,7 +299,7 @@
 
 <div class = "phone_number_input">
 <form action="{{ url_for('register_1') }}" id = "form1" method= POST >
-    <input type="text" id="phone" name="lphone" placeholder = "Enter your Phone Number" value = "" required> 
+    <input type="number" minlength="10" required maxlength="10"  id="phone" name="lphone" placeholder = "Enter your Phone Number" value = "" required> 
 </form>
 </div>   
 

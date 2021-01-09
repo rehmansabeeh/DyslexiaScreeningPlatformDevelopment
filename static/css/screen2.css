@@ -2,7 +2,12 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-	height: 100%;
+	overflow: scroll;
+	overflow-x: hidden; /* Hide horizontal scrollbar */
+
+	background-color:#DBF6F4;
+
+
 	
 }
 .main {
@@ -18,7 +23,7 @@ body {
 	height: 100%;
 	float: left;
 	background-color: #3AAFA9;
-	position: relative;
+	position: fixed;
 }
 .container-right {
 	width: 88%;
@@ -37,24 +42,31 @@ body {
 }
 .sub-bottom {
 	width: 100%;
-	height: 90%;
+	height: 65%;
 	position: relative;
 	overflow: hidden;
 }
-.sub-bottom button {
+
+.sub-bottom1 {
+	width: 100%;
+	height: 80%;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+.sub-bottom1 button {
 	background-color: #3AAFA9;
 	border: none;
 	border-radius: 5px;
 	color: white;
-	padding: 1% 2%;
+	padding: 1.5% 3%;
 	text-align: center;
 	text-decoration: none;
-
 	font-size: 16px;
-    padding: 2% 8%;
 	margin-top: 3%;
-	float: right;
-	margin-right: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Nunito';
 }
 .content {
 	height: 50%;
@@ -94,6 +106,7 @@ body {
 	border-radius: 3px;
 	position: relative;
 	cursor: pointer;
+	font-family: 'Nunito';
 }
 .right-button button {
 	margin: 0;
@@ -109,7 +122,9 @@ body {
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-    font-size: 16px;
+	font-size: 16px;
+	font-family: 'Nunito';
+
 }
 .right-button:hover {
 	background-color: #3AAFA9;
@@ -142,7 +157,15 @@ body {
 .frame {
 	margin: 0;
 	width: 90%;
-	height: 50%;
+	height: 65%;
+	margin-left: 8%;
+	margin-top: 10%;
+	position: relative;
+}
+.frame1 {
+	margin: 0;
+	width: 90%;
+	height: 55%;
 	margin-left: 8%;
 	margin-top: 10%;
 	position: relative;

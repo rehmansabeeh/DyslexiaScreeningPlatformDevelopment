@@ -46,7 +46,9 @@ body {
 	padding: 1% 2%;
 	text-align: center;
 	text-decoration: none;
-	display: inline-block;
+  display: inline-block;
+  font-family: 'Nunito';
+
     font-size: 16px;
     padding: 2% 8%;
     margin-top: 3%;
@@ -57,6 +59,8 @@ body {
     position: relative;
     margin-top: 10%;
     margin-bottom: 5%;
+    font-family: 'Nunito';
+
 }
 
 .text {
@@ -65,6 +69,8 @@ body {
     position: relative;
     margin-top: 2%;
     margin-bottom: 5%;
+    font-family: 'Nunito';
+
 }
 
 .bottom{
@@ -89,7 +95,7 @@ body {
 }
 .another_bottom{
     background-color: white;
-    height: 95%;
+    height: 100%;
     width: 100%;
     float: left;
     align-items: center;
@@ -97,7 +103,7 @@ body {
 }
 .second_last{
     background-color:#F5FCFB;
-    height: 95%;
+    height: 100%;
     width: 100%;
     float: left;
     align-items: center;
