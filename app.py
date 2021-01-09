@@ -22,7 +22,7 @@ def index():
         print('hello')
     if 'username' in session:
         print("successful")
-    return redirect(url_for("create_profile_3"))
+    return redirect(url_for("q1_quiz"))
 
 
 @app.route('/login', methods=['POST'])
@@ -130,12 +130,6 @@ def register_4():
         return render_template("DyslexiaScreen_After_4.html")
 
 
-# @app.route('/create_profile_1', methods=['POST', 'GET'])
-# def create_profile_1():
-#     if request.method == 'POST':
-#         file_val = request.files['file']
-#     return render_template("DyslexiaScreen1.html")
-
 @app.route('/create_profile_1', methods=['POST', 'GET'])
 def create_profile_1():
     print("method is : ", request.method)
@@ -153,20 +147,12 @@ def create_profile_1():
 
 @app.route('/q1_quiz', methods=['POST', 'GET'])
 def q1_quiz():
-    questions = mongo.db.Questions
-    data = questions.find({'q_level': '3'})
-    # print(data)
-    for i in data:
-        print(i['actual_word'])
-    print("Q1: ", request.method)
+
     if request.method == 'POST':
-        # answers = request.get_json(force=True)
-        # if answers['selected'] == answers['correct']:
-        #     score += 1
-        res = make_response(jsonify({'message': "successful"}))
-        return res
+        print(request.form['abcd'])
+        return 'hello'
     else:
-        return render_template("screen2.html", data=data)
+        return render_template("screen3.html")
 
 
 @app.route('/create_profile_2', methods=['POST', 'GET'])
@@ -181,6 +167,17 @@ def create_profile_2():
         return res
     else:
         return render_template('DyslexiaScreen2.html')
+
+
+@app.route('/test_start_1', methods=['POST', 'GET'])
+def test_start_1():
+
+    print("method2 is : ", request.method)
+
+    if request.method == 'POST':
+        return redirect(url_for('q1_quiz'))
+    else:
+        return render_template('test_start_page.html')
 
 
 @app.route('/create_profile_3', methods=['POST', 'GET'])
