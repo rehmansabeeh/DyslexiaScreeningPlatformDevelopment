@@ -52,9 +52,11 @@
           <nav class="main-nav float-right d-none d-lg-block col-lg-6">
             <ul>
               <li class="active"><a href="#intro">Screening Test</a></li>
-              <li><a href="#about">What's Dyslexia?</a></li>
-              <li><a href="#services">About Us</a></li>
+              <li><a href="{{ url_for('homepage', _anchor='whatis') }}">What's Dyslexia?</a></li>
+              <li><a href="{{ url_for('homepage', _anchor='about') }}">About Us</a></li>
+              <form method="GET" action="{{url_for('login')}}">
               <li class = "button_element"><button class  = "darkgreen" id = "login_button">LOGIN</button></li>
+            </form>
               
             </ul>
           </nav><!-- .main-nav -->
@@ -102,16 +104,6 @@
           <div class = "clearfix"></div>
         </div>
   
-
-      <!-- <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="lib/easing/easing.min.js"></script>
-      <script src="lib/mobile-nav/mobile-nav.js"></script>
-      <script src="lib/wow/wow.min.js"></script>
-      <script src="lib/waypoints/waypoints.min.js"></script>
-      <script src="lib/counterup/counterup.min.js"></script>
-      <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-      <script src="lib/isotope/isotope.pkgd.min.js"></script> -->
-      <!-- <script src="lib/lightbox/js/lightbox.min.js"></script> -->
       <script src="../static/lib/jquery/jquery.min.js"></script>
       <script src="../static/lib/jquery/jquery-migrate.min.js"></script>
       <script src="../static/lib/mobile-nav/mobile-nav.js"></script>s

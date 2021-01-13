@@ -14,9 +14,6 @@ app.config['MONGO_URI'] = "mongodb+srv://sabeeh:sabeeh123@cluster0.etpsv.gcp.mon
 session = {}
 mongo = PyMongo(app)
 
-email_on_which_link_is_to_be_sent = []
-phone_no_on_which_link_is_to_be_sent = []
-
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -701,35 +698,21 @@ def q6_quiz():
     questions = mongo.db.Questions
     if request.method == 'POST':
         questions = mongo.db.Questions
-        # <========Need to find correct answers here============>
-        # correct_answers =
         score = 0
         mcqs_answers = request.get_json(force=True)
         print("Answers: ", mcqs_answers)
-        # for element in range(len(mcqs_answers['selected'])):
-        #     if mcqs_answers['selected'][element] == mcqs_answers['correct_answers'][element]:
-        #         score += 1
+
         user_id = mcqs_answers['query_variable_in_url']
-        # print("USERNAMEEEEE2 ", username )
+
         user_id = ObjectId(user_id)
-        # add_score = mongo.db.Scores
-        # add_score.insert_one(
-        #         {'user_id' : user_id, "quiz_type": "audio_word" , "score" : score }
-        #         )
+
         user_id = str(user_id)
         res = make_response(
             jsonify({'message': "successful", "id_to_be_passed": user_id}))
         return res
 
     else:
-        # users = mongo.db.name_age_gender
-        # user_id = request.args.get('id')
-        # # print("USERNAMEEEEE2 ", username )
-        # user_id = ObjectId(user_id)
-        # user_data = users.find_one({'_id':user_id})
-        # data = questions.find({'q_level': user_data['grade_selected_user']})
-        # questions_to_send = list(data)
-        # print("Data: " , questions_to_send)
+
         return render_template("screen7.html")
 
 
