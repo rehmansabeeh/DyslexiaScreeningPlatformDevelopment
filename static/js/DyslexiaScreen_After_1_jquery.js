@@ -101,47 +101,63 @@ var country_code
     var country_code = "";
     var phone_number = "";
 
-    $("#lemail").change(function(){
-      entered_email = $("#lemail").val();
-    });
-    $('#countryCode_drop_down').change(function(){
-      country_code = $('#countryCode_drop_down:selected').text();
-    });
 
-    $('#phone').change(function(){
-      phone_number = $("#phone").val();
-    });
+var urlParams = new URLSearchParams(window.location.search);
+var myParam = urlParams.get('id');
+console.log(myParam)
 
-
-    $('.next_button').click(function() {  
-      fetch(`${window.origin}/register_1`,{
-        method : 'POST',
-        credentials : "include",
-        body : JSON.stringify({
-          entered_email_user : entered_email,
-          country_code_user : country_code,
-          phone_number_user : phone_number
-        }),
-        cache :'no-cache'
-      }).then(function(response){
-        if(response.status == 200)
-        { console.log("OKAY!")
-          response.json().then( function(data){
+  $('.next_button').click(function() {  
+    entered_email = $("#lemail").val();
+    country_code = $('#countryCode_drop_down:selected').val();
+    phone_number = $("#phone").val();
+    fetch(`${window.origin}/register_1`,{
+      method : 'POST',
+      credentials : "include",
+      body : JSON.stringify({
+        entered_email_user : entered_email,
+        country_code_user : country_code,
+        phone_number_user : phone_number,
+        query_variable_in_url : myParam
+      }),
+      cache :'no-cache'
+    }).then(function(response){
+      if(response.status == 200)
+      { console.log("OKAY!")
+        response.json().then( function(data){
+          if(data['message'] == "successful"){
             if(data['trajectory'] == "email"){
-              window.location.href = `${window.origin}/register_using_email`
-            }
-            
-            else if(data['trajectory'] == "phone_no")
-              { window.location.href = `${window.origin}/register_using_phone` }
-          })
-        
-        
+            window.location.href = `${window.origin}/register_using_email`+ '?id=' + myParam;
+          }
+          
+          else if(data['trajectory'] == "phone_no"){
+             window.location.href = `${window.origin}/register_using_phone`+'?id=' + myParam; }
+          }
+          else if(data['message'] == "unsuccessful"){
+            alert("You have not entered any of the given fields")
+          }
+          else if(data['message'] == "existing"){
+           alert("One of the fields entered is already in use") 
+          }
+          else if(data['message'] == "existing_number"){
+            alert("You already have an account with another number") 
+           }
+           else if(data['message'] == "existing_email"){
+            alert("You already have an account with another email") 
+           }
+           else if(data['message'] == "invalid_email"){
+            alert("The email entered is invalid") 
+           }
+           else if(data['message'] == "invalid_number"){
+            alert("The number entered is invalid") 
+           }
+          
+        })
       
-      // window.location.href = `${window.origin}/q1_quiz`
-    }
+      
+    
+    // window.location.href = `${window.origin}/q1_quiz`
   }
-
-  )
+})
 
 
 })

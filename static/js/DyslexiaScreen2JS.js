@@ -19,14 +19,65 @@ function move() {
 var no_of_clicks_male = 0;
 var no_of_clicks_female = 0;
 var no_of_clicks_other = 0;
-var selected_education_level;
+var selected_education_level = "";
 
 (function ($) {
     "use strict";
+    new WOW().init
+
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $('#header').addClass('header-scrolled');
+      } else {
+        $('#header').removeClass('header-scrolled');
+      }
+    });
+  
+    if ($(window).scrollTop() > 100) {
+      $('#header').addClass('header-scrolled');
+    }
+  
+    // Smooth scroll for the navigation and links with .scrollto classes
+    $('.main-nav a, .mobile-nav a, .scrollto').on('click', function() {
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        if (target.length) {
+          var top_space = 0;
+  
+          if ($('#header').length) {
+            top_space = $('#header').outerHeight();
+  
+            if (! $('#header').hasClass('header-scrolled')) {
+              top_space = top_space - 20;
+            }
+          }
+  
+          $('html, body').animate({
+            scrollTop: target.offset().top - top_space
+          }, 1500, 'easeInOutExpo');
+  
+          if ($(this).parents('.main-nav, .mobile-nav').length) {
+            $('.main-nav .active, .mobile-nav .active').removeClass('active');
+            $(this).closest('li').addClass('active');
+          }
+  
+          if ($('body').hasClass('mobile-nav-active')) {
+            $('body').removeClass('mobile-nav-active');
+            $('.mobile-nav-toggle i').toggleClass('fa-times fa-bars');
+            $('.mobile-nav-overly').fadeOut();
+          }
+          return false;
+        }
+      }
+    });
+
     $('.school_selection').click(function() {
         selected_education_level = "School";
+        
         console.log(selected_education_level);    
-    
+    $('.hide_grades_or_not').css({
+        'display' : 'block'
+    })
     $('.college_selection').css({
         'border': 'none',
         'border-radius': '6px',
@@ -70,7 +121,9 @@ no_of_clicks_male++;
 
 $('.college_selection').click(function() {
     selected_education_level = "College";
-
+    $('.hide_grades_or_not').css({
+        'display' : 'none'
+    })
 
     $('.school_selection').css({
         'border': 'none',
@@ -116,7 +169,9 @@ no_of_clicks_female++;
 
 $('.university_selection').click(function() {
     selected_education_level = "University";
-
+    $('.hide_grades_or_not').css({
+        'display' : 'none'
+    })
     
     $('.school_selection').css({
         'border': 'none',
@@ -158,7 +213,7 @@ no_of_clicks_other++;
 
 });
 var no_of_clicks_array = [0,0,0,0,0,0,0,0,0,0]
-var selected_grade;
+var selected_grade = "";
 
 $('.circle_grade_option_0').click(function() {
     var i; 
@@ -810,28 +865,39 @@ var myParam = urlParams.get('id');
 console.log(myParam)
 
 $('.next_button').click(function() {
-
+    if(selected_education_level == "")
+    {
+        alert("Please select education level")
+    }
+else{
+        if(selected_education_level == "School" && selected_grade == "")
+        {
+            alert("Please select grade")       
+        }
+        else
+        {
+            fetch(`${window.origin}/create_profile_2`,{
+            method : 'POST',
+            credentials : "include",
+            body : JSON.stringify({
+              grade_sent : selected_grade,
+              selected_education_level_sent : selected_education_level,
+              query_variable_in_url: myParam
+            }),
+            cache : 'no-store'
+          }).then(function(response){
+            if(response.status == 200)
+            { 
+              response.json().then(function(data_received){
+                window.location.href = `${window.origin}/create_profile_3` + '?id=' + data_received['id_to_be_passed'];
+              })
+            }
+            })
+        }
+    }
  
   
-  fetch(`${window.origin}/create_profile_2`,{
-    method : 'POST',
-    credentials : "include",
-    body : JSON.stringify({
-      grade_sent : selected_grade,
-      selected_education_level_sent : selected_education_level,
-      query_variable_in_url: myParam
-    }),
-    cache : 'no-store'
-  }).then(function(response){
-    if(response.status == 200)
-    { 
-      response.json().then(function(data_received){
-        window.location.href = `${window.origin}/create_profile_3` + '?id=' + data_received['id_to_be_passed'];
-      })
-    }
-  }
-
-  )
+ 
 })
 })(jQuery);
     

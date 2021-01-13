@@ -4,14 +4,18 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="../static/css/video_demo.css">
 </head>
-
+<script type="text/javascript">
+  function goBack(){
+  window.history.back();
+}
+</script>
 <body>
 
     <video controls="controls" class="center" width="60%" height="70%">
         <source src="../static/images/vid.mp4" type="video/mp4">
         Your browser does not support HTML video.
     </video>
-    <button class="buttonn" > <a href=\"javascript:history.go(-1)\">skip</a> </button>
+    <button class="buttonn" onclick="goBack()"> <b>Skip</b> </button>
 
 </body>
 </html>

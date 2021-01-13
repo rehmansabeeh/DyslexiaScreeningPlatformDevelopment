@@ -288,6 +288,18 @@ body {
   padding-top: 8px;
   transition: ease all 0.3s;  
 } 
+.hide_grades_or_not{
+  display: none;
+  transition: ease all 0.5s;  
+}
+.end_buttons{
+  padding-bottom: 25px;
+}  
+.arrow_button{
+  float: left;
+  color: #2B7A78;
+  font-size: 38px;
+}
   /* .main-nav .drop-down ul {
     display: block;
     position: absolute;
@@ -378,7 +390,8 @@ body {
     border-radius: 14px;
     position: relative;
     background-color: #fff;
-    top: 111.5px;
+    top: 145.5px;
+    padding-bottom: 30px;
   }
   /* .light_grey_line{
     width: 100%;

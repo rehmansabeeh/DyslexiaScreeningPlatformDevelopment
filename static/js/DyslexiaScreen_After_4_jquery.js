@@ -71,10 +71,40 @@
       });
     });
 
-    
-    var entered_username = $("#lusername").value;
-    var entered_password = $("#lpassword").value;
+    var urlParams = new URLSearchParams(window.location.search);
+    var myParam = urlParams.get('id');
 
+     $('.next_button').click(function() {
+      var entered_username = $("#lusername").val();
+    var entered_password = $("#lpassword").val();
+
+ 
+  
+  fetch(`${window.origin}/register_3`,{
+    method : 'POST',
+    credentials : "include",
+    body : JSON.stringify({
+      username : entered_username,
+      password : entered_password,
+      query_variable_in_url : myParam
+    }),
+    cache : 'no-store'
+  }).then(function(response){
+    if(response.status == 200)
+    { 
+      response.json().then(function(data_received){
+        if (data_received['message']=='existing')
+          {
+            alert("already have an account")
+            // window.location.href = `${window.origin}/register_3` + '?id=' + data_received['id_to_be_passed'];;
+          }
+        window.location.href = `${window.origin}/login`; /*+ '?id=' + data_received['id_to_be_passed'];*/
+      })
+    }
+  }
+
+  )
+})
     // Here we need to send entered username and password  
 
     

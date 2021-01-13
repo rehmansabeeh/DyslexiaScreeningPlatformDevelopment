@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="../static/css/screen2_ayesha.css">
 </head>
-
 <body>
+<div class = "exit_button_popup">
+	<p style="color: #2B7A78;font-weight: 100;font-size: 30px;">Are you sure you want to exit?</p>
+	<a href = "{{url_for('redirecttohomepage')}}"><button class = "yes_exit_confirmation_button">Yes</button></a>
+	<button class = "no_exit_confirmation_button">No</button>
+</div>
 <div class="main">
 	<div class="container-left">
 		<div class="icon-question">
-			<a href = "video_demo.html"><img src="../static/images/questionmark1.png" class="questionmarkk"/></a>
+			<a href = "{{url_for('video_page')}}"><img src="../static/images/questionmark1.png" class="questionmarkk"/></a>
 		</div>
 		<div class= "icon-gallery">
 			<img src="../static/images/test1-logo.png" width=90% height=90%/>
@@ -27,20 +31,21 @@
 	<div class = "test_div9">{{data[8].actual_word}}</div>	
 	
 	<div class="container-right">
+		
 		<div class="sub-top">
 			<div class="content">
 				<div class="left-bar">
 					
 				</div>
 				<div class="right-button">
-					<button id="myBtn">Exit</button>
+					<p>Exit</p>
 				</div>
 			</div>
 		</div>
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[0].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-first" id = "first_set_id_1">
@@ -53,7 +58,7 @@
 						<p>{{data[0].option_3}}</p>
 					</div>
 					<div class="box-first" id = "first_set_id_4">
-						<p>{{data[0].actual_word}}</p>
+						<p>{{data[0].option_4}}</p>
 					</div>
 				</div>
 			</div>	
@@ -61,7 +66,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[1].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-second" id = "second_set_id_1">
@@ -74,7 +79,7 @@
 						<p>{{data[1].option_3}}</p>
 					</div>
 					<div class="box-second" id = "second_set_id_4">
-						<p> {{data[1].actual_word}}</p>
+						<p> {{data[1].option_4}}</p>
 					</div>
 				</div>
 			</div>	
@@ -82,7 +87,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[2].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-third" id = "third_set_id_1">
@@ -95,7 +100,7 @@
 						<p>{{data[2].option_3}}</p>
 					</div>
 					<div class="box-third" id = "third_set_id_4">
-						<p>{{data[2].actual_word}}</p>
+						<p>{{data[2].option_4}}</p>
 					</div>
 				</div>
 			</div>	
@@ -103,7 +108,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[3].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-fourth" id = "fourth_set_id_1">
@@ -116,15 +121,15 @@
 						<p>{{data[3].option_3}}</p>
 					</div>
 					<div class="box-fourth" id = "fourth_set_id_4">
-						<p>{{data[3].actual_word}}</p>
+						<p>{{data[3].option_4}}</p>
 					</div>
 				</div>
 			</div>	
-]		</div>
+		</div>
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[4].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-fifth" id = "fifth_set_id_1">
@@ -137,7 +142,7 @@
 						<p> {{data[4].option_3}}</p>
 					</div>
 					<div class="box-fifth" id = "fifth_set_id_4">
-						<p>{{data[4].actual_word}}</p>
+						<p>{{data[4].option_4}}</p>
 					</div>
 				</div>
 			</div>	
@@ -145,7 +150,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[5].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-sixth" id = "sixth_set_id_1">
@@ -158,7 +163,7 @@
 						<p>{{data[5].option_3}}</p>
 					</div>
 					<div class="box-sixth" id = "sixth_set_id_4">
-						<p>{{data[5].actual_word}}</p>
+						<p>{{data[5].option_4}}</p>
 					</div>
 				</div>
 			</div>	
@@ -166,7 +171,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[6].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-seventh" id = "seventh_set_id_1">
@@ -179,7 +184,7 @@
 						<p>{{data[6].option_3}}</p>
 					</div>
 					<div class="box-seventh" id = "seventh_set_id_4">
-						<p>{{data[6].actual_word}}</p>
+						<p>{{data[6].option_4}}</p>
 					</div>
 				</div>
 			</div>	
@@ -187,7 +192,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[7].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-eighth" id = "eighth_set_id_1">
@@ -200,7 +205,7 @@
 						<p>{{data[7].option_3}}</p>
 					</div>
 					<div class="box-eighth" id = "eighth_set_id_4">
-						<p>{{data[7].actual_word}}</p>
+						<p>{{data[7].option_4}}</p>
 					</div>
 				</div>
 			</div>	
@@ -208,7 +213,7 @@
 		<div class="sub-bottom1">
 			<div class="frame1">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[8].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
 					<div class="box-ninth" id = "ninth_set_id_1">
@@ -221,7 +226,7 @@
 						<p>{{data[8].option_3}}</p>
 					</div>
 					<div class="box-ninth" id = "ninth_set_id_4">
-						<p>{{data[8].actual_word}}</p>
+						<p>{{data[8].option_4}}</p>
 					</div>
 				</div>
 			</div>	

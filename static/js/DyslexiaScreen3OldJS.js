@@ -17,6 +17,7 @@ function move() {
   }
 }
 
+
 (function ($) {
     "use strict";
     new WOW().init
@@ -77,15 +78,16 @@ function move() {
     var read_write_frequent = 0;
     var read_write_occasionally = 0;
     var read_write_rarely = 0;
-    var first_language = "";
-    var bilingual = "";
-    var reading_writing_in_Urdu = "";
+    var first_language;
+    var bilingual;
+    var reading_writing_in_Urdu;
 
 
     
     $('.first_language_1').click(function() {
       
-
+      first_language = "Yes";
+  
       $('.first_language_2').css({
           'border': '1px solid #B4ADB0',
           'width': '100%',
@@ -106,7 +108,6 @@ if(first_language_no%2 != 0){
 
 
 if(first_language_yes%2 == 0){
-  first_language = "Yes";
   $('.first_language_1').css({
       'border': 'none',
       'border-radius': '6px',
@@ -117,7 +118,6 @@ if(first_language_yes%2 == 0){
 }
 
 else{
-  first_language = "";
   $('.first_language_1').css({
     'border': '1px solid #B4ADB0',
     'width': '100%',
@@ -159,7 +159,6 @@ if(first_language_yes%2 != 0){
 
 
 if(first_language_no%2 == 0){
-  first_language = "No";
   $('.first_language_2').css({
       'border': 'none',
       'border-radius': '6px',
@@ -170,7 +169,6 @@ if(first_language_no%2 == 0){
 }
 
 else{
-  first_language = "";
   $('.first_language_2').css({
     'border': '1px solid #B4ADB0',
     'width': '100%',
@@ -190,6 +188,7 @@ first_language_no++;
 
 $('.bilingual_1').click(function() {
       
+      bilingual = "Yes";
   
       $('.bilingual_2').css({
           'border': '1px solid #B4ADB0',
@@ -211,7 +210,6 @@ if(bilingual_no%2 != 0){
 
 
 if(bilingual_yes%2 == 0){
-  bilingual = "Yes";
   $('.bilingual_1').css({
       'border': 'none',
       'border-radius': '6px',
@@ -222,7 +220,6 @@ if(bilingual_yes%2 == 0){
 }
 
 else{
-  bilingual = "";
   $('.bilingual_1').css({
     'border': '1px solid #B4ADB0',
     'width': '100%',
@@ -242,7 +239,7 @@ bilingual_yes++;
 
 $('.bilingual_2').click(function() {
       
-      
+      bilingual = "No";
   
       $('.bilingual_1').css({
           'border': '1px solid #B4ADB0',
@@ -264,7 +261,6 @@ if(bilingual_yes%2 != 0){
 
 
 if(bilingual_no%2 == 0){
-  bilingual = "No";
   $('.bilingual_2').css({
       'border': 'none',
       'border-radius': '6px',
@@ -275,7 +271,6 @@ if(bilingual_no%2 == 0){
 }
 
 else{
-  bilingual = "";
   $('.bilingual_2').css({
     'border': '1px solid #B4ADB0',
     'width': '100%',
@@ -295,7 +290,9 @@ bilingual_no++;
 
 $('.frequently_box').click(function() {
       
-        $('.occassionally_box').css({
+      reading_writing_in_Urdu = "Frequently";
+  
+      $('.occassionally_box').css({
           'border': '1px solid #B4ADB0',
           'width': '100%',
           'padding': '10px',
@@ -330,7 +327,7 @@ if(read_write_occasionally%2 != 0){
 
 
 if(read_write_frequent%2 == 0){
-  reading_writing_in_Urdu = "Frequently";
+
   $('.frequently_box').css({
       'border': 'none',
       'border-radius': '6px',
@@ -341,7 +338,6 @@ if(read_write_frequent%2 == 0){
 }
 
 else{
-  reading_writing_in_Urdu = "";
   $('.frequently_box').css({
     'border': '1px solid #B4ADB0',
     'width': '100%',
@@ -362,6 +358,8 @@ read_write_frequent++;
 
 $('.rarely_box').click(function() {
       
+      reading_writing_in_Urdu = "Rarely";
+  
       $('.occassionally_box').css({
           'border': '1px solid #B4ADB0',
           'width': '100%',
@@ -397,7 +395,7 @@ if(read_write_occasionally%2 != 0){
 
 
 if(read_write_rarely%2 == 0){
-  reading_writing_in_Urdu = "Rarely";
+
   $('.rarely_box').css({
       'border': 'none',
       'border-radius': '6px',
@@ -408,7 +406,6 @@ if(read_write_rarely%2 == 0){
 }
 
 else{
-  reading_writing_in_Urdu = "";
   $('.rarely_box').css({
     'border': '1px solid #B4ADB0',
     'width': '100%',
@@ -428,6 +425,8 @@ read_write_rarely++;
 
 $('.occassionally_box').click(function() {
       
+      reading_writing_in_Urdu = "Occassionally";
+  
       $('.rarely_box').css({
           'border': '1px solid #B4ADB0',
           'width': '100%',
@@ -463,7 +462,7 @@ if(read_write_frequent%2 != 0){
 
 
 if(read_write_occasionally%2 == 0){
-  reading_writing_in_Urdu = "Occassionally";
+
   $('.occassionally_box').css({
       'border': 'none',
       'border-radius': '6px',
@@ -474,7 +473,6 @@ if(read_write_occasionally%2 == 0){
 }
 
 else{
-  reading_writing_in_Urdu = "";
   $('.occassionally_box').css({
     'border': '1px solid #B4ADB0',
     'width': '100%',
@@ -492,53 +490,22 @@ read_write_occasionally++;
 
 });
 
-var urlParams = new URLSearchParams(window.location.search);
-var myParam = urlParams.get('id');
-console.log(myParam)
+$.when($(".next_button").click(function() {
 
-
-$('.next_button').click(function() {
- 
-  if(first_language == "" || bilingual == "" || reading_writing_in_Urdu == "")
-  {
-    alert("Kindly fill all the fields!")
-  }
-  else
-  {
-    fetch(`${window.origin}/create_profile_3`,{
-    method : 'POST',
-    credentials : "include",
-    body : JSON.stringify({
-      first_language_Urdu : first_language,
-      bilingual_Urdu : bilingual,
-      reading_writing_in_Urdu : reading_writing_in_Urdu,
-      query_variable_in_url: myParam
-    }),
-    cache : 'no-store'
-  }).then(function(response){
-    console.log("OKAY2")
-    if(response.status == 200)
-    { console.log("OKAY!")
-      response.json().then(function(data_received){
-        window.location.href = `${window.origin}/test_start_1` + '?id=' + data_received['id_to_be_passed'];
-      })
-    }
-  }
-  )
-  }
-
-})
-
-
+$.ajax({
+    
+    url:'/create_profile_3', //the page containing python script
+    type: "POST", //request type,
+    dataType: 'text',
+    data: JSON.stringify({'data_reached_or_not': "success" , 'first_language_Urdu': first_language , 'bilingual_Urdu': bilingual , 'reading_writing_in_Urdu': reading_writing_in_Urdu  }),
+    contentType: "application/json",
+    success: function(date_reached_or_not){  
+                    console.log(date_reached_or_not) 
+                  }  
+         
+        })
+})).then( )
 })(jQuery);
-
-
-
-
-
-
-
-
 
 //     $('.gender_selection_female').css({
 //         'border': 'none',

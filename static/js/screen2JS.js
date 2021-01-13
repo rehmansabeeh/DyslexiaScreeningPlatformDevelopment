@@ -149,7 +149,15 @@ var correct_option_9 = $('.test_div9').html()
 var urlParams = new URLSearchParams(window.location.search);
 var myParam = urlParams.get('id');
 console.log(myParam)
+$('.right-button').click(function(){
+      $(".main").fadeTo(1000, 0.165);
+      $(".exit_button_popup").fadeIn("slow");
+})
 
+$('.no_exit_confirmation_button').click(function(){
+      $(".main").fadeTo(1000, 1);
+      $(".exit_button_popup").fadeOut("slow");
+})
 $('.next_button').click(function() {
   
 fetch(`${window.origin}/q1_quiz`,{

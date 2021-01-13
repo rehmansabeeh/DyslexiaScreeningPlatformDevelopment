@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -100,22 +101,12 @@ body {
   cursor: pointer;
   font-family: "Nunito";
 }
-.right-button button {
+.right-button p {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #3aafa9;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  padding: 8.5% 40%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  font-family: "Nunito";
 }
 .right-button:hover {
   background-color: #3aafa9;
@@ -136,16 +127,92 @@ body {
   width: 90%;
   height: 90%;
 }
-
 .icon-gallery {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.test_div1 {
+.exit_button_popup{
+  border: 1px solid #fff;
+  width: 33%;
   display: none;
+  border-radius: 14px;
+  text-align: center;
+  /* padding: 20px; */
+  padding-bottom: 3%;
+  padding-left: 2%;
+  padding-right: 3%;
+  position: absolute;
+  background-color: #fff;
+  top: 35%;
+  left: 34%;
+  z-index: 1;
+  font-family: 'Nunito';
+  box-shadow: -1px 1px 18px #3aafa9;
+
 }
+
+.exit_confirmation_buttons
+{
+  float: left; 
+}
+.yes_exit_confirmation_button
+{
+    margin: auto;
+    display: flex;
+    float: left;
+    align-items: center;
+    height: 38px;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 22%;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: 0.5s ease all;
+    font-family: 'Nunito';
+    font-size: 20px;
+    border: 2.5px solid #3AAFA9; 
+
+}
+
+.yes_exit_confirmation_button:hover
+{   
+    color: #fff;
+    background-color: #3AAFA9;
+    border: none;
+}
+
+.no_exit_confirmation_button
+{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 6px; 
+    background-color: #fff;
+    font-family: 'Nunito';
+    font-size: 20px;
+    border: 2.5px solid #3AAFA9;
+    transition: 0.5s ease all    
+}
+
+.no_exit_confirmation_button:hover
+{   
+    color: #fff;
+    background-color: #3AAFA9;
+    border: none;
+}
+
 .test_div2 {
   display: none;
 }
@@ -218,6 +285,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-first p {
   font-size: 200%;
@@ -251,6 +319,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-second p {
   font-size: 200%;
@@ -284,6 +353,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-third p {
   font-size: 200%;
@@ -317,6 +387,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-fourth p {
   font-size: 200%;
@@ -350,6 +421,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-fifth p {
   font-size: 200%;
@@ -383,6 +455,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-sixth p {
   font-size: 200%;
@@ -416,6 +489,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-seventh p {
   font-size: 200%;
@@ -449,6 +523,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-eighth p {
   font-size: 200%;
@@ -482,6 +557,7 @@ body {
   border: 1px solid black;
   align-items: center;
   position: relative;
+  transition: 0.5s ease all
 }
 .box-ninth p {
   font-size: 200%;

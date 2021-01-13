@@ -7,10 +7,15 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+<div class = "exit_button_popup">
+	<p style="color: #2B7A78;font-weight: 100;font-size: 30px;">Are you sure you want to exit?</p>
+	<a href = "{{url_for('redirecttohomepage')}}"><button class = "yes_exit_confirmation_button">Yes</button></a>
+	<button class = "no_exit_confirmation_button">No</button>
+</div>
 <div class="main">
 	<div class="container-left">
 		<div class="icon-question">
-			<img src="../static/images/questionmark1.png" class="questionmarkk"/>
+			<a href = "{{url_for('video_page')}}"><img src="../static/images/questionmark1.png" class="questionmarkk"/></a>
 		</div>
 		<div class= "icon-gallery">
 			<img src="../static/images//test6-logo.png"  width=90% height=90% />
@@ -41,7 +46,7 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[0].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -56,7 +61,7 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[1].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -71,13 +76,13 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[2].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "third_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
-				</div>c
+				</div>
 			</div>
 		</div>
 
@@ -86,7 +91,7 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[3].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -101,7 +106,7 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[4].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -116,7 +121,7 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[5].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -131,7 +136,7 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[6].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -146,7 +151,7 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[7].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -161,7 +166,7 @@
 				<div class="sub-left">
                    <!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[8].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>

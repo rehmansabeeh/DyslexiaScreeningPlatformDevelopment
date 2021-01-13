@@ -5,10 +5,15 @@
 <link rel="stylesheet" href="../static/css/screen4.css">
 </head>
 <body>
+<div class = "exit_button_popup">
+	<p style="color: #2B7A78;font-weight: 100;font-size: 30px;">Are you sure you want to exit?</p>
+	<a href = "{{url_for('redirecttohomepage')}}"><button class = "yes_exit_confirmation_button">Yes</button></a>
+	<button class = "no_exit_confirmation_button">No</button>
+</div>
 <div class="main">
 	<div class="container-left">
 		<div class="icon-question">
-			<img src="../static/images/questionmark1.png" class="questionmarkk"/>
+			<a href = "{{url_for('video_page')}}"><img src="../static/images/questionmark1.png" class="questionmarkk"/></a>
 		</div>
 		<div class= "icon-gallery">
 			<img src="../static/images/test5-logo.png"  width=90% height=90% />
@@ -25,12 +30,13 @@
 				</div>
 			</div>
 		</div>
+		<!-- https://docs.google.com/uc?export=download&id=1G4E_Nw6W8IaT59_sumo_OrwxfyAxgv6Y -->
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[0].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -45,7 +51,7 @@
 						<p>{{data[0].option_3}}</p>
 					</div>
 					<div class="box-first" id = "first_set_id_4">
-						<p>{{data[0].actual_word}}</p>
+						<p>{{data[0].option_4}}</p>
 				    </div>
 				</div>
 			</div>
@@ -56,7 +62,7 @@
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[1].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -71,7 +77,7 @@
 						<p>{{data[1].option_3}}</p>
 					</div>
 					<div class="box-second" id = "second_set_id_4">
-						<p> {{data[1].actual_word}}</p>
+						<p> {{data[1].option_4}}</p>
 					</div>
 				</div>
 			</div>
@@ -82,7 +88,7 @@
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[2].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -97,7 +103,7 @@
 						<p>{{data[2].option_3}}</p>
 					</div>
 					<div class="box-second" id = "second_set_id_4">
-						<p> {{data[2].actual_word}}</p>
+						<p> {{data[2].option_4}}</p>
 					</div>
 				</div>
 			</div>
@@ -108,7 +114,7 @@
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[3].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -123,7 +129,7 @@
 						<p>{{data[3].option_3}}</p>
 					</div>
 					<div class="box-fourth" id = "fourth_set_id_4">
-						<p>{{data[3].actual_word}}</p>
+						<p>{{data[3].option_4}}</p>
 					</div>
 				</div>
 			</div>
@@ -134,7 +140,7 @@
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[4].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -149,7 +155,7 @@
 						<p> {{data[4].option_3}}</p>
 					</div>
 					<div class="box-fifth" id = "fifth_set_id_4">
-						<p>{{data[4].actual_word}}</p>
+						<p>{{data[4].option_4}}</p>
 					</div>
 				</div>
 			</div>
@@ -160,7 +166,7 @@
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[5].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -175,7 +181,7 @@
 						<p>{{data[5].option_3}}</p>
 					</div>
 					<div class="box-sixth" id = "sixth_set_id_4">
-						<p>{{data[5].actual_word}}</p>
+						<p>{{data[5].option_4}}</p>
 					</div>
 				</div>
 			</div>
@@ -186,7 +192,7 @@
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[6].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -201,7 +207,7 @@
 						<p>{{data[6].option_3}}</p>
 					</div>
 					<div class="box-seventh" id = "seventh_set_id_4">
-						<p>{{data[6].actual_word}}</p>
+						<p>{{data[6].option_4}}</p>
 					</div>
 				</div>
 			</div>
@@ -212,7 +218,7 @@
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[7].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -227,7 +233,7 @@
 						<p>{{data[7].option_3}}</p>
 					</div>
 					<div class="box-eighth" id = "eighth_set_id_4">
-						<p>{{data[7].actual_word}}</p>
+						<p>{{data[7].option_4}}</p>
 					</div>
 				</div>
 			</div>
@@ -239,7 +245,7 @@
 				<div class="sub-left">
 					<!-- <img src="./images/speaker.png" width=30% height=42%/> -->
 					<audio controls>
-						<source src="../static/audio_files/temp sound.mp3" type="audio/mpeg">
+						<source src="{{data[8].audio}}" type="audio/ogg">
 					  Your browser does not support the audio element.
 					  </audio>
 				</div>
@@ -254,7 +260,7 @@
 						<p>{{data[8].option_3}}</p>
 					</div>
 					<div class="box-ninth" id = "ninth_set_id_4">
-						<p>{{data[8].actual_word}}</p>
+						<p>{{data[8].option_4}}</p>
 					</div>
 				</div>
 			</div>

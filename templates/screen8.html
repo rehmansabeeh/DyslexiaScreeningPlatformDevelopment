@@ -2,15 +2,20 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="../static/css//screen8.css">
+<link rel="stylesheet" href="../static/css/screen8.css">
 <link rel="stylesheet" href="../static/css/keyboard.css">
 </head>
 
 <body>
+<div class = "exit_button_popup">
+    <p style="color: #2B7A78;font-weight: 100;font-size: 30px;">Are you sure you want to exit?</p>
+    <a href = "{{url_for('redirecttohomepage')}}"><button class = "yes_exit_confirmation_button">Yes</button></a>
+    <button class = "no_exit_confirmation_button">No</button>
+</div>
 <div class="main">
 	<div class="container-left">
 		<div class="icon-question">
-			<img src="../static/images/questionmark1.png" class="questionmarkk"/>
+			<a href = "video_demo.html"><img src="../static/images/questionmark1.png" class="questionmarkk"/></a> 
 		</div>
 		<div class= "icon-gallery">
 			<img src="../static/images/test8-logo.png" width=90% height=90%/>
@@ -19,7 +24,9 @@
 	<div class="container-right">
 		<div class="sub-top">
 			<div class="content">
-	
+				<div class="left-bar">
+                    
+                </div>
 				<div class="right-button">
 					<p>Exit</p>
 				</div>
@@ -51,11 +58,20 @@
 					<textarea class="use-keyboard-input" style="font-size: 20px; text-align:right;  position: absolute; top: 5%; right: 5%; width: 88%; height:88% ;"></textarea>
 					</div>
 				</div>
-				
+			<div class="centered-button">
+                
+                <button class = "next_button" style="text-decoration: none; color: #fff">Next </button>
+            </div>		
 			</div>
+		
 		</div>
+
 	</div>
-</div>
+<script src="../static/lib/jquery/jquery.min.js"></script>
+<script src="../static/lib/jquery/jquery-migrate.min.js"></script>
+<script src="../static/lib/mobile-nav/mobile-nav.js"></script>
+<script src="../static/lib/wow/wow.min.js"></script>
 <script src="../static/js/keyboard.js"></script>
+<script src="../static/js/screen8JS.js"></script>
 </body>
 </html>

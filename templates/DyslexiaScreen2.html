@@ -32,7 +32,11 @@
     License: https://bootstrapmade.com/license/
   ======================================================= -->
 </head>
-
+<script type="text/javascript">
+  function goBack(){
+  window.history.back();
+}
+</script>
 <body>
     <header id="header" class="fixed-top">
         <div class="container">
@@ -103,6 +107,7 @@
               </div>
       </div>
           <div class = "clearfix"></div>
+          <div class = "wow hide_grades_or_not">
           <p><b>Grade</b></p>
           <div class = "row">
                   <div class = "col-lg-1">
@@ -165,9 +170,13 @@
                   
                   </div>
               </div>
+          </div>
           <div class = "clearfix"></div>
           <!-- <a class="darkgreen next_button" href = "{{ url_for('q1_quiz') }}">Button</a> -->
-          <button class = "darkgreen next_button">NEXT</div> 
+          <div class = end_buttons>
+            <i class="fa fa-arrow-left arrow_button" aria-hidden="true" onclick="goBack()"></i>
+            <button class = "darkgreen next_button" >NEXT</button>
+          </div>
           
 
           <div class = "clearfix"></div>

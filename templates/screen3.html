@@ -7,10 +7,15 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+<div class = "exit_button_popup">
+	<p style="color: #2B7A78;font-weight: 100;font-size: 30px;">Are you sure you want to exit?</p>
+	<a href = "{{url_for('redirecttohomepage')}}"><button class = "yes_exit_confirmation_button">Yes</button></a>
+	<button class = "no_exit_confirmation_button">No</button>
+</div>
 <div class="main">
 	<div class="container-left">
 		<div class="icon-question">
-			<img src="../static/images/questionmark1.png" class="questionmarkk"/>
+			<a href = "{{url_for('video_page')}}"><img src="../static/images/questionmark1.png" class="questionmarkk"/></a>
 		</div>
 		<div class= "icon-gallery">
 			<img src="../static/images/test2-logo.png" width=90% height=90%/>
@@ -39,7 +44,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[0].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "first_question"  style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
@@ -50,7 +55,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[1].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "second_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
@@ -61,7 +66,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[2].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "third_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
@@ -69,10 +74,11 @@
 			</div>
 		</div>
 
+
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[3].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "fourth_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
@@ -83,18 +89,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
-				</div>
-				<div class="sub-right">
-                    <textarea class="use-keyboard-input" id = "fourth_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
-				</div>
-			</div>
-		</div>
-
-		<div class="sub-bottom">
-			<div class="frame">
-				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[4].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "fifth_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
@@ -105,7 +100,7 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[5].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "sixth_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
@@ -116,29 +111,29 @@
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[6].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "seventh_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
 				</div>
 			</div>
-]		</div>
+		</div>
 
 		<div class="sub-bottom">
 			<div class="frame">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[7].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "eighth_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>
 				</div>
 			</div>
-]		</div>
+		</div>
 
 		<div class="sub-bottom1">
 			<div class="frame1">
 				<div class="sub-left">
-					<img src="../static/images/chair.jpg" width=75% height=75%/>
+					<img src="{{data[8].image}}" width=75% height=75%/>
 				</div>
 				<div class="sub-right">
                     <textarea class="use-keyboard-input" id = "ninth_question" style="font-size: 18px; text-align:right;  position: absolute; top: 40%; right: 10%; width: 60%;"></textarea>

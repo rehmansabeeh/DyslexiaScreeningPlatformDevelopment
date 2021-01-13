@@ -4,6 +4,10 @@ var no_of_clicks_female = 0;
 var no_of_clicks_other = 0;
 var country_code
 
+function goBack(){
+  window.history.back();
+}
+
 (function ($) {
     "use strict";
     
@@ -81,10 +85,35 @@ var country_code
     // });
   
     // Porfolio isotope and filter
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var myParam = urlParams.get('id');
+// console.log(myParam)
+
+
+    $('.resend_button').click(function() {
+
  
-  $('.resend_button').on('click', function() {
-    //seeing resend message
+  
+  fetch(`${window.origin}/register_using_email`,{
+    method : 'POST',
+    credentials : "include",
+    body : JSON.stringify({
+      query_variable_in_url : myParam
+    }),
+    cache : 'no-store'
+  }).then(function(response){
+    if(response.status == 200)
+    { 
+      response.json().then(function(data_received){
+        window.location.href = `${window.origin}/register_3` + '?id=' + data_received['id_to_be_passed'];
+      })
+    }
   }
+
+  )
+})
+ 
 
 
     

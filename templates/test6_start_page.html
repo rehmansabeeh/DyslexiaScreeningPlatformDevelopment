@@ -10,10 +10,15 @@
   <!-- Libraries CSS Files -->
   <!-- Bootstrap CSS File -->
 <link href="../static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="../static/css/test_start_page.css">
+<link rel="stylesheet" href="../static/css/test6_start_page.css">
 </head>
 
 <body>
+<div class = "exit_button_popup">
+	<p style="color: #2B7A78;font-weight: 100;font-size: 30px;">Are you sure you want to exit?</p>
+	<a href = "{{url_for('redirecttohomepage')}}"><button class = "yes_exit_confirmation_button">Yes</button></a>
+	<button class = "no_exit_confirmation_button">No</button>
+</div>
 <div class="main">
 	<div class="container-right">
 		<div class="sub-top">
@@ -34,11 +39,10 @@
 			<div class="sub-right">
                 <div class="box">
                     <div class="heading">
-                        Picture-Word - MCQ
+                        Audio-Word-Writing
                     </div>
                     <div class="text">
-                        Subheading text here. Dummy Text: Dyslexia is a neurological symptom wherein an individual experiences difficulty reading.
-                    </div>
+						For each audio clip in this test, use the on-screen keyboard to type the word that best describes what you hear.                    </div>
                     <button class = "start_button" style="text-decoration: none; color: #fff">Start</button>
                 </div>
 				

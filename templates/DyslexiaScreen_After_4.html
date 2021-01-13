@@ -29,7 +29,12 @@
     License: https://bootstrapmade.com/license/
   ======================================================= -->
 </head>
-
+<script type="text/javascript">
+  function goBack(){
+  window.history.back();
+  console.log("kajshdkasj")
+}
+</script>
 <body>
     <header id="header" class="fixed-top">
         <div class="container">
@@ -63,19 +68,19 @@
                 <div class = "clearfix"></div>
                 <div class = "light_grey_line col-lg-12"></div>
                 <div class = "username_form">
-                  <form action="{{ url_for('temp') }}" method= POST id = "form2" >
+                  <!-- <form action="{{ url_for('register_3') }}" method= POST id = "form2" > -->
                     <input type="text" id="lusername" name="lusername" placeholder="Username" style = "width: 100%; padding: 10px;">
 
-                  </form>    
+                  <!-- </form>     -->
                 </div>
                 <div class = "clearfix"></div>
                 <div class = "clearfix"></div>
 
                 <div class = "password_form">
-                  <form action="{{ url_for('temp') }}" method= POST id = "form2" >
+                  <!-- <form action="{{ url_for('register_3') }}" method= POST id = "form2" > -->
                     <input type="text" id="lpassword" name="lpassword" placeholder="Password" style = "width: 100%; padding: 10px;">
 
-                  </form>    
+                  <!-- </form>     -->
                 </div>
                 
                 <div class = "clearfix"></div>
@@ -98,7 +103,7 @@
             
           <!-- need to use ajax framewor to send data -->
           <div class = end_buttons>
-            <i class="fa fa-arrow-left arrow_button" aria-hidden="true"></i>
+            <i class="fa fa-arrow-left arrow_button" aria-hidden="true" onclick="goBack()"></i>
             <button class = "darkgreen next_button">NEXT</button>
           </div>
           

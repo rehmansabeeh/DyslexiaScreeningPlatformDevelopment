@@ -161,6 +161,91 @@ body {
   width: 50%;
   position: relative;
 }
+.icon-gallery {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.exit_button_popup{
+  border: 1px solid #fff;
+  width: 33%;
+  display: none;
+  border-radius: 14px;
+  text-align: center;
+  /* padding: 20px; */
+  padding-bottom: 3%;
+  padding-left: 2%;
+  padding-right: 3%;
+  position: absolute;
+  background-color: #fff;
+  top: 35%;
+  left: 34%;
+  z-index: 1;
+  font-family: 'Nunito';
+  box-shadow: -1px 1px 18px #3aafa9;
+
+}
+.exit_confirmation_buttons
+{
+  float: left; 
+}
+.yes_exit_confirmation_button
+{
+    margin: auto;
+    display: flex;
+    float: left;
+    align-items: center;
+    height: 38px;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 22%;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: 0.5s ease all;
+    font-family: 'Nunito';
+    font-size: 20px;
+    border: 2.5px solid #3AAFA9; 
+
+}
+
+.yes_exit_confirmation_button:hover
+{   
+    color: #fff;
+    background-color: #3AAFA9;
+    border: none;
+}
+
+.no_exit_confirmation_button
+{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 6px; 
+    background-color: #fff;
+    font-family: 'Nunito';
+    font-size: 20px;
+    border: 2.5px solid #3AAFA9;
+    transition: 0.5s ease all    
+}
+
+.no_exit_confirmation_button:hover
+{   
+    color: #fff;
+    background-color: #3AAFA9;
+    border: none;
+}
 .textt {
   width: 20%;
   height: 25%;
@@ -177,6 +262,7 @@ body {
   border-radius: 20px;
 }
 .box-first {
+  background-color: white;
   display: inline-block;
   height: 38%;
   width: 35%;
@@ -187,6 +273,7 @@ body {
   align-items: center;
   position: relative;
   text-align: center;
+  transition: 0.5s ease all
 }
 
 .box-first img {
@@ -226,7 +313,7 @@ body {
   align-items: center;
   position: relative;
   text-align: center;
-  background-color: #3aafa9;
+  transition: 0.5s ease all
 }
 
 .box-second img {
@@ -266,6 +353,7 @@ body {
   align-items: center;
   position: relative;
   text-align: center;
+  transition: 0.5s ease all
 }
 
 .box-third img {
@@ -305,6 +393,7 @@ body {
   align-items: center;
   position: relative;
   text-align: center;
+  transition: 0.5s ease all
 }
 
 .box-fourth img {
@@ -333,6 +422,19 @@ body {
   color: white;
 }
 
+.box-fifth {
+  display: inline-block;
+  height: 38%;
+  width: 35%;
+  margin-top: 0%;
+  margin-left: 10%;
+  margin-right: 1%;
+  margin-bottom: 15%;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  transition: 0.5s ease all
+}
 .box-fifth img {
   width: 80%;
   height: 85%;
@@ -358,12 +460,26 @@ body {
   border: 1px solid #3aafa9;
   color: white;
 }
+.box-sixth {
+  display: inline-block;
+  height: 38%;
+  width: 35%;
+  margin-top: 0%;
+  margin-left: 10%;
+  margin-right: 1%;
+  margin-bottom: 15%;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  transition: 0.5s ease all
+}
 .box-sixth img {
   width: 80%;
   height: 85%;
   float: bottom;
   align-self: center;
 }
+
 .box-sixth audio {
   width: 80%;
   height: 85%;
@@ -382,6 +498,19 @@ body {
   background-color: #3aafa9;
   border: 1px solid #3aafa9;
   color: white;
+}
+.box-seventh {
+  display: inline-block;
+  height: 38%;
+  width: 35%;
+  margin-top: 0%;
+  margin-left: 10%;
+  margin-right: 1%;
+  margin-bottom: 15%;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  transition: 0.5s ease all
 }
 .box-seventh img {
   width: 80%;
@@ -408,6 +537,19 @@ body {
   border: 1px solid #3aafa9;
   color: white;
 }
+.box-eighth {
+  display: inline-block;
+  height: 38%;
+  width: 35%;
+  margin-top: 0%;
+  margin-left: 10%;
+  margin-right: 1%;
+  margin-bottom: 15%;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  transition: 0.5s ease all
+}
 .box-eighth img {
   width: 80%;
   height: 85%;
@@ -432,6 +574,19 @@ body {
   background-color: #3aafa9;
   border: 1px solid #3aafa9;
   color: white;
+}
+.box-ninth {
+  display: inline-block;
+  height: 38%;
+  width: 35%;
+  margin-top: 0%;
+  margin-left: 10%;
+  margin-right: 1%;
+  margin-bottom: 15%;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  transition: 0.5s ease all
 }
 .box-ninth img {
   width: 80%;
@@ -484,4 +639,18 @@ body {
 }
 .test_div9 {
   display: none;
+}
+.sub-bottom button {
+  background-color: #3AAFA9;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 1.5% 3%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: 46%;
+  font-family: 'Nunito';
 }
